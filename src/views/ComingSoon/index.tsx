@@ -3,11 +3,11 @@ import "../../css/index.css"
 
 const Index = () => {
   return (
-    <div className="h-screen bg-backgroundDark text-gray-300 items-center justify-center flex font-cat">
-    <div className="flex flex-col items-center">
-      <div className="font-light text-7xl">Coming Soon. </div>
+    <div className="full-page-dark">
+    <div className="centered-column">
+      <div className="font-light title">Coming Soon. </div>
       <a
-        className="hover:text-gray-300 text-accent"
+        className="link"
         href="https://github.com/cc0407/cc0407.github.io/tree/staging"
       >
         View development here.
