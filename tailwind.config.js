@@ -4,7 +4,7 @@
 //quarternary: e94560
 
 module.exports = {
-  purge: [],
+  purge: {enabled: false},
   target: "relaxed",
   prefix: "",
   important: false,

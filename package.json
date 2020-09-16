@@ -35,11 +35,10 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "npm run clean && gatsby build",
+    "build": "npm run clean && gatsby build && gh-pages -d public",
     "develop": "npm run clean && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
-    "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public"
+    "clean": "gatsby clean"
   }
 }

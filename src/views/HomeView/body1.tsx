@@ -1,12 +1,12 @@
-import React from "react"
+import React from "react";
 
 export const Body1 = () => {
   return (
-    <div className="full-page-dark">
-      <div className="centered-column">
-        <div className="title">Coming Soon. </div>
+    <div className="h-screen bg-backgroundDark text-gray-300 items-center justify-center flex font-cat">
+      <div className="flex flex-col items-center">
+        <div className="font-light text-7xl">Coming Soon. </div>
         <a
-          className="link"
+          className="hover:text-gray-300 text-accent"
           href="https://github.com/cc0407/cc0407.github.io/tree/staging"
         >
           View development here.
@@ -14,4 +14,4 @@ export const Body1 = () => {
       </div>
     </div>
   )
-}
+};
