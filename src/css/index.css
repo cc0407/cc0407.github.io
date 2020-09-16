@@ -12,8 +12,19 @@
     .link:hover{
         @apply text-gray-300
     }
+
     .title {
-        @apply font-light text-7xl
+        @apply font-light 
+    }
+    @screen xs {
+        .title {
+            @apply text-5xl
+        }
+    }
+    @screen sm {
+        .title {
+            @apply text-7xl
+        }
     }
 
     .centered-column {
