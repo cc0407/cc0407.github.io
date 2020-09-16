@@ -4,3 +4,7 @@ module.exports = {
   variants: {},
   plugins: [],
 }
+//main: 1a1a2e
+//secondary: 16213e
+//tertiary: 0f3460
+//quarternary: e94560
