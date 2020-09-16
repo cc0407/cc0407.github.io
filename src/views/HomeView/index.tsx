@@ -1,5 +1,5 @@
 import React from "react"
-import "../../css/index.css"
+require("../../css/index.css");
 
 import { Body1 } from "./body1"
 

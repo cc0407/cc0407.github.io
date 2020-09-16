@@ -14,7 +14,7 @@
     }
 
     .title {
-        @apply font-light 
+        @apply font-light text-4xl
     }
     @screen xs {
         .title {

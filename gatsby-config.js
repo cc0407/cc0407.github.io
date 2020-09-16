@@ -11,10 +11,10 @@ module.exports = {
         postCssPlugins: [require("tailwindcss")("./tailwind.config.js")],
       },
     },
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: { tailwind: true },
-    },
+    // {
+    //   resolve: `gatsby-plugin-purgecss`,
+    //   options: { tailwind: true },
+    // },
     `gatsby-plugin-react-helmet`,
 
     `gatsby-transformer-sharp`,
