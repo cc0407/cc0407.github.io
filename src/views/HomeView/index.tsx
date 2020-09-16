@@ -1,11 +1,13 @@
-import React from 'react';
-import "../../css/index.css";
-import { Body1 } from './body1';
+import React from "react"
+import "../../css/index.css"
+import { Body1 } from "./body1"
 
 const Index = () => {
-    return(
-        <Body1/>
-    );
-};
+  return (
+    <div>
+      <Body1 />
+    </div>
+  )
+}
 
-export default Index;
+export default Index

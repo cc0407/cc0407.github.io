@@ -1,3 +1,3 @@
-import Index from "../views/HomeView";
+import Index from "../views/HomeView"
 
-export default Index;
+export default Index
