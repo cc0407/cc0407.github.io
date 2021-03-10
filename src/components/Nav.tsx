@@ -4,6 +4,11 @@ import React from "react"
 export const Nav = () => {
     return(
         <div className="nav">
+            <div className="nav-item">Christian Catalano</div>
+            <div className="nav-options nav-item">
+                <div> ABOUT</div>
+                <div> RESUME</div>
+            </div>
         </div>
     )
 };

@@ -4,10 +4,19 @@
 
 
 .full-page {
-    @apply h-screen bg-background text-main items-start justify-center flex
+    @apply h-screen bg-background text-main items-center justify-center flex
 }
 .nav {
-    @apply absolute left-0 bg-tert w-full h-16 z-10 text-gray-300 items-center flex flex-col
+    @apply  bg-tert w-full h-16 z-10 text-gray-300 items-center flex flex-row justify-between
+}
+.nav-options {
+    @apply flex flex-row
+}
+.nav-options > * {
+    @apply px-4
+}
+.nav-item {
+    @apply px-16
 }
 
 
