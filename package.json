@@ -36,7 +36,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "npm run clean && gatsby build && postcss css/tailwind.css -o public/build/tailwind.css",
+    "build": "npm run clean && gatsby build",
     "serve": "npm run build && gh-pages -d public",
     "develop": "npm run clean && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",

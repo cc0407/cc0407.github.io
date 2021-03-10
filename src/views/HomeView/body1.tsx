@@ -3,7 +3,7 @@ require("../../css/index.css");
 
 export const Body1 = () => {
   return (
-    <div className="h-screen bg-backgroundDark text-gray-300 items-center justify-center flex">
+    <div className="full-page-dark">
       <div className="flex flex-col items-center">
         <div className="font-light text-7xl">Coming Soon. </div>
         <a

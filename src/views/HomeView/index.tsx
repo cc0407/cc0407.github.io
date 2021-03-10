@@ -1,6 +1,7 @@
 import React from "react"
 import { Nav } from "../../components/Nav";
 require("../../css/index.css");
+import {SoonBody} from "../ComingSoon/index";
 import { Body1 } from "./body1"
 
 const Index = () => {
