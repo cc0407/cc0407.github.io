@@ -6,7 +6,7 @@ import { Body1 } from "./body1"
 
 const Index = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col max-h-screen">
       <Nav />
       <Body1 />
     </div>
