@@ -3,15 +3,11 @@ require("../../css/index.css");
 
 export const Body1 = () => {
   return (
-    <div className="full-page-dark">
-      <div className="flex flex-col items-center">
-        <div className="font-light text-7xl">Coming Soon. </div>
-        <a
-          className="hover:text-gray-300 text-accent"
-          href="https://github.com/cc0407/cc0407.github.io/tree/staging"
-        >
-          View development here.
-        </a>
+    <div className="full-page">
+      <div className="centered-column">
+        <div className="title">Hello! </div>
+        <div className="body p-0">My name is Christian Catalano.</div>
+        <div className="body p-0">I am a front-end web developer with 3 years of work experience.</div>
       </div>
     </div>
   )
