@@ -6,8 +6,10 @@ export const Nav = () => {
         <div className="nav">
             <div className="nav-item">Christian Catalano</div>
             <div className="nav-options nav-item">
-                <div> ABOUT</div>
-                <div> RESUME</div>
+                <div>ABOUT</div>
+                <div>PROJECTS</div>
+                <div>EXPERIENCE</div>
+                <div>RESUME</div>
             </div>
         </div>
     )
