@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <div className="flex flex-col">
       <Nav />
-      <Body1 />
+      <SoonBody />
     </div>
   )
 }
