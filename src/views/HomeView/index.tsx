@@ -1,11 +1,12 @@
 import React from "react"
+import { Nav } from "../../components/Nav";
 require("../../css/index.css");
-
 import { Body1 } from "./body1"
 
 const Index = () => {
   return (
-    <div>
+    <div className="flex flex-col">
+      <Nav />
       <Body1 />
     </div>
   )
