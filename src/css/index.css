@@ -4,10 +4,10 @@
 
 
 .full-page {
-    @apply h-screen bg-background text-main items-center justify-center flex
+    @apply h-screen text-main items-center justify-center flex
 }
 .nav {
-    @apply  bg-tert w-full h-16 z-10 text-gray-300 items-center flex flex-row justify-between
+    @apply fixed left-0 bg-tert w-full h-16 z-10 text-gray-300 items-center flex flex-row justify-between
 }
 .nav-options {
     @apply flex flex-row
@@ -35,7 +35,7 @@
 
 
 .title {
-    @apply font-light text-4xl pb-64 pt-32
+    @apply font-light text-4xl
 }
 .body {
     @apply font-light text-xl

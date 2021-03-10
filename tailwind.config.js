@@ -31,7 +31,8 @@ module.exports = {
       tertDark: "#5E5E5E",
       quatDark: "#333333",
 
-      background: "#E2E8F0",
+      background1: "#E2E8F0",
+      background2: "#EEEDF0",
       main: "#333333",
       second: "#6BC0A8",
       tert: "#4B8AA4",
