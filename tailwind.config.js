@@ -23,9 +23,23 @@ module.exports = {
 
       white: "#fff",
       // backgroundDark: "#0E1020",
+      // backgroundDark: "#1a1a2e",
+
+      backgroundDark: "#121212",
+      mainDark: "#E2E8F0",
+      secondDark: "#9E9E9E",
+      tertDark: "#5E5E5E",
+      quatDark: "#333333",
+
+      background: "#E2E8F0",
+      main: "#333333",
+      second: "#6BC0A8",
+      tert: "#4B8AA4",
+      quat: "A39F89",
+      
       accentBlue: "#5a6577",
       mainBlue: "#4b8aa4",
-      backgroundDark: "#1a1a2e",
+      
       temp: "#6BC0A8",
       accent: "#e94560",
       black: "#363052",

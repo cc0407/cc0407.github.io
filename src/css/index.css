@@ -2,22 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.full-page {
+    @apply h-screen bg-background text-main items-start justify-center flex
+}
+.nav {
+    @apply absolute left-0 bg-tert w-full h-16 z-10 text-gray-300 items-center flex flex-col
+}
+
+
 .full-page-dark {
-    @apply h-screen bg-backgroundDark text-gray-300 items-center justify-center flex
+    @apply h-screen bg-backgroundDark text-mainDark items-center justify-center flex
 }
-.temp {
-    @apply h-screen bg-temp text-gray-300 items-center justify-center flex
+.nav-dark {
+    @apply absolute left-0 bg-temp w-full h-16 z-10 text-gray-300 items-center flex flex-col
 }
-.link {
+.link-dark {
     @apply text-accent
 }
-.link:hover{
+.link-dark:hover{
     @apply text-gray-300
 }
 
+
 .title {
-    @apply font-light text-4xl
+    @apply font-light text-4xl pb-64 pt-32
 }
+.body {
+    @apply font-light text-xl
+}
+.centered-column {
+    @apply flex flex-col items-center
+}
+
+
 @screen xs {
     .title {
         @apply text-5xl
@@ -29,6 +47,3 @@
     }
 }
 
-.centered-column {
-    @apply flex flex-col items-center
-}
