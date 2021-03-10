@@ -1,5 +1,5 @@
 import Index from "../views/HomeView";
-import ComingSoon from '../views/ComingSoon';
+import {SoonBody} from '../views/ComingSoon';
 
-export default ComingSoon
+export default SoonBody
 // export default Index

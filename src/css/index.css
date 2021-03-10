@@ -2,32 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    .full-page-dark {
-        @apply h-screen bg-backgroundDark text-gray-300 items-center justify-center flex font-cat
-    }
-    .link {
-        @apply text-accent
-    }
-    .link:hover{
-        @apply text-gray-300
-    }
+.full-page-dark {
+    @apply h-screen bg-backgroundDark text-gray-300 items-center justify-center flex
+}
+.temp {
+    @apply h-screen bg-temp text-gray-300 items-center justify-center flex
+}
+.link {
+    @apply text-accent
+}
+.link:hover{
+    @apply text-gray-300
+}
 
+.title {
+    @apply font-light text-4xl
+}
+@screen xs {
     .title {
-        @apply font-light text-4xl
+        @apply text-5xl
     }
-    @screen xs {
-        .title {
-            @apply text-5xl
-        }
+}
+@screen sm {
+    .title {
+        @apply text-7xl
     }
-    @screen sm {
-        .title {
-            @apply text-7xl
-        }
-    }
+}
 
-    .centered-column {
-        @apply flex flex-col items-center
-    }
+.centered-column {
+    @apply flex flex-col items-center
 }

@@ -2,9 +2,9 @@ import React from "react";
 import Anime from "react-anime";
 require("../../css/index.css");
 
-const Index = () => {
+export const SoonBody = () => {
   return (
-    <div className="h-screen bg-backgroundDark text-gray-300 items-center justify-center flex font-cat">
+    <div className="full-page-dark">
       <div className="flex flex-col items-center">
         <Anime opacity={[0, 1]} duration={2000} easing={"easeInOutExpo"}>
           <div className="font-light text-4xl xs:text-5xl sm:text-7xl">
@@ -22,6 +22,4 @@ const Index = () => {
       </div>
     </div>
   )
-}
-
-export default Index
+};
