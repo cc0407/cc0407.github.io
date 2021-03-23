@@ -4,10 +4,10 @@
 
 
 .full-page {
-    @apply h-screen bg-background text-main items-center justify-center flex
+    @apply h-screen items-center justify-center flex
 }
 .nav {
-    @apply  bg-tert w-full h-16 z-10 text-gray-300 items-center flex flex-row justify-between
+    @apply w-full h-16 z-10 items-center flex flex-row justify-between
 }
 .nav-options {
     @apply flex flex-row
@@ -18,22 +18,6 @@
 .nav-item {
     @apply px-16
 }
-
-
-.full-page-dark {
-    @apply h-screen bg-backgroundDark text-mainDark items-center justify-center flex
-}
-.nav-dark {
-    @apply absolute left-0 bg-temp w-full h-16 z-10 text-gray-300 items-center flex flex-col
-}
-.link-dark {
-    @apply text-accent
-}
-.link-dark:hover{
-    @apply text-gray-300
-}
-
-
 .title {
     @apply font-light text-4xl
 }
@@ -44,7 +28,7 @@
     @apply font-light text-base max-w-screen-lg
 }
 .centered-column {
-    @apply flex flex-col items-center
+    @apply flex flex-col items-center h-screen
 }
 .split {
     @apply flex flex-row
@@ -53,7 +37,26 @@
     @apply w-64 h-64 rounded-full
 }
 .left-column {
-    @apply flex flex-col items-start
+    @apply flex flex-col items-start h-screen
+}
+
+.page-light {
+    @apply bg-background text-main 
+}
+.nav-light {
+    @apply bg-tert text-gray-300
+}
+.page-dark {
+    @apply bg-backgroundDark text-mainDark
+}
+.nav-dark {
+    @apply bg-temp text-gray-300
+}
+.link-dark {
+    @apply text-accent
+}
+.link-dark:hover{
+    @apply text-gray-300
 }
 
 @screen xs {
