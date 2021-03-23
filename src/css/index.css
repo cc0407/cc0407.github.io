@@ -35,15 +35,26 @@
 
 
 .title {
-    @apply font-light text-4xl pb-64 pt-32
+    @apply font-light text-4xl
 }
-.body {
-    @apply font-light text-xl
+.subtitle {
+    @apply font-light text-xl max-w-screen-lg pb-2
+}
+.body2 {
+    @apply font-light text-base max-w-screen-lg
 }
 .centered-column {
     @apply flex flex-col items-center
 }
-
+.split {
+    @apply flex flex-row
+}
+.circle-image {
+    @apply w-64 h-64 rounded-full
+}
+.left-column {
+    @apply flex flex-col items-start
+}
 
 @screen xs {
     .title {
