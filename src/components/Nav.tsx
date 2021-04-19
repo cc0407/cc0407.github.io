@@ -1,9 +1,9 @@
 import React from "react"
 import {FaMoon, FaSun} from 'react-icons/fa';
 
-export const Nav = ({scrolled, dark, setDarkMode}) => {
+export const Nav = ({scrolled, dark, flipDarkMode}) => {
     return(
-        <div className={(!scrolled ? `fade nav` : `fade nav-small`) + ` ` + (dark ? `nav-dark` : `nav-light`)}>
+        <div className={(!scrolled ? `nav` : `nav-small`) + ` ` + (dark ? `nav-dark` : `nav-light`)}>
             <div className="nav-item">Christian Catalano</div>
             <div className="nav-options nav-item">
                 <div> ABOUT</div>
@@ -11,13 +11,13 @@ export const Nav = ({scrolled, dark, setDarkMode}) => {
                 <div>
                     {dark ? <FaMoon
                         className="fade"
-                        onClick={()=> setDarkMode(dark => !dark)} 
+                        onClick={()=> flipDarkMode()} 
                         style={{zIndex: 11 ,display: 'flex'}}
                         size={24}
                     />
                     : <FaSun
                         className="fade"
-                        onClick={()=> setDarkMode(dark => !dark)} 
+                        onClick={()=> flipDarkMode()} 
                         style={{zIndex: 11 ,display: 'flex'}}
                         size={24}
                     />}

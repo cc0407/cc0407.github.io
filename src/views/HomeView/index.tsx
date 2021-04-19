@@ -28,15 +28,16 @@ const Index = () => {
           onClick={scrollTop} 
           style={{bottom: 10, right: 32, height: 40, display: scrolled ? 'flex' : 'none'}}
           size={32}
+          color={darkMode ? `white` : `black`}
       />
       <Nav 
         scrolled={scrolled}
         dark={darkMode}
-        setDarkMode={setDarkMode}
+        flipDarkMode={() => setDarkMode(dark => !dark)}
       />
       <div className="flex flex-col">
-        <Body1 dark={darkMode, setDarkMode}/>
-        <Body2 />
+        <Body1 darkMode={darkMode}/>
+        <Body2 darkMode={darkMode}/>
       </div>
     </div>
   )

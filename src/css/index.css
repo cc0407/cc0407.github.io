@@ -51,22 +51,22 @@
 }
 
 .page-light {
-    @apply bg-background text-main 
+    @apply bg-background text-main fade
 }
 .nav-light {
-    @apply bg-tert text-gray-300
+    @apply bg-tert text-gray-300 fade
 }
 .page-dark {
-    @apply bg-backgroundDark text-mainDark
+    @apply bg-backgroundDark text-mainDark fade
 }
 .nav-dark {
-    @apply bg-temp text-gray-300
+    @apply bg-temp text-gray-300 fade
 }
 .link-dark {
-    @apply text-accent
+    @apply text-accent fade
 }
 .link-dark:hover{
-    @apply text-gray-300
+    @apply text-gray-300 fade
 }
 
 @screen xs {
