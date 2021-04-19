@@ -4,10 +4,11 @@ require("../../css/index.css");
 import {SoonBody} from "../ComingSoon/index";
 import { Body1 } from "./body1"
 import { Body2 } from "./body2"
-import {FaArrowCircleUp} from 'react-icons/fa';
+import {FaArrowAltCircleUp} from 'react-icons/fa';
 
 const Index = () => {
   const [scrolled, setShowScroll] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
   const scrollTop = () =>{
     window.scrollTo({top: 0, behavior: 'smooth'});
   };
@@ -22,15 +23,16 @@ const Index = () => {
 
   return (
     <div>
-      <FaArrowCircleUp 
-          className="scroll-top" 
+      <FaArrowAltCircleUp
+          className="scroll-top fade" 
           onClick={scrollTop} 
           style={{bottom: 10, right: 32, height: 40, display: scrolled ? 'flex' : 'none'}}
           size={32}
       />
       <Nav 
         scrolled={scrolled}
-        theme={true}
+        dark={darkMode}
+        setDarkMode={setDarkMode}
       />
       <div className="flex flex-col">
         <Body1 />
