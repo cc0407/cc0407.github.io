@@ -13,9 +13,9 @@ const Index = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
   };
   const checkScrollTop = () => {    
-    if (!scrolled && window.pageYOffset > 50){
+    if (!scrolled && window.pageYOffset > 40){
      setShowScroll(true)    
-   } else if (scrolled && window.pageYOffset <= 50){
+   } else if (scrolled && window.pageYOffset <= 40){
      setShowScroll(false)    
    }  
   };
@@ -28,7 +28,7 @@ const Index = () => {
           onClick={scrollTop} 
           style={{bottom: 10, right: 32, height: 40, display: scrolled ? 'flex' : 'none'}}
           size={32}
-          color={darkMode ? `#6BC0A8` : `#4B8AA4`}
+          color={darkMode ? `#6BC0A8` : `#333333`}
       />
       <Nav 
         scrolled={scrolled}

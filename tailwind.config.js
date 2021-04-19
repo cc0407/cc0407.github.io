@@ -22,10 +22,9 @@ module.exports = {
       current: "currentColor",
 
       white: "#fff",
-      // backgroundDark: "#0E1020",
-      // backgroundDark: "#1a1a2e",
 
-      backgroundDark: "#121212",
+      //backgroundDark: "#121212",
+      backgroundDark: "#0E1020",
       mainDark: "#E2E8F0",
       secondDark: "#9E9E9E",
       tertDark: "#5E5E5E",
