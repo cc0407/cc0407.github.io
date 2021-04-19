@@ -9,6 +9,9 @@
 .nav {
     @apply w-full h-16 z-10 items-center flex flex-row justify-between fixed
 }
+.nav-small {
+    @apply w-full h-12 z-10 items-center flex flex-row justify-between fixed
+}
 .nav-options {
     @apply flex flex-row
 }
@@ -41,6 +44,10 @@
 }
 .scroll-top {
     @apply fixed right-0 bottom-0
+}
+
+.fade {
+    @apply ease-in-out duration-200
 }
 
 .page-light {

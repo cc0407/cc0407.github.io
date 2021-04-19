@@ -8,6 +8,9 @@ import {FaArrowCircleUp} from 'react-icons/fa';
 
 const Index = () => {
   const [scrolled, setShowScroll] = useState(false)
+  const scrollTop = () =>{
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  };
   const checkScrollTop = () => {    
     if (!scrolled && window.pageYOffset > 50){
      setShowScroll(true)    
@@ -16,9 +19,6 @@ const Index = () => {
    }  
    };
    window.addEventListener('scroll', checkScrollTop)
-   const scrollTop = () =>{
-     window.scrollTo({top: 0, behavior: 'smooth'});
-   };
   return (
     <div>
       <FaArrowCircleUp 
