@@ -39,6 +39,9 @@
 .left-column {
     @apply flex flex-col items-start h-screen
 }
+.scroll-top {
+    @apply fixed right-0 bottom-0
+}
 
 .page-light {
     @apply bg-background text-main 
