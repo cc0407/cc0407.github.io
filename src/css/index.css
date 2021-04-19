@@ -7,7 +7,7 @@
     @apply h-screen items-center justify-center flex
 }
 .nav {
-    @apply w-full h-16 z-10 items-center flex flex-row justify-between
+    @apply w-full h-16 z-10 items-center flex flex-row justify-between fixed
 }
 .nav-options {
     @apply flex flex-row

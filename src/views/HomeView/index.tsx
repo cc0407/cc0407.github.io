@@ -27,8 +27,8 @@ const Index = () => {
           style={{height: 40, display: showScroll ? 'flex' : 'none'}}
           size={24}
       />
+      <Nav />
       <div className="flex flex-col">
-        <Nav />
         <Body1 />
         <Body2 />
       </div>
