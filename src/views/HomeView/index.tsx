@@ -28,7 +28,7 @@ const Index = () => {
           onClick={scrollTop} 
           style={{bottom: 10, right: 32, height: 40, display: scrolled ? 'flex' : 'none'}}
           size={32}
-          color={darkMode ? `white` : `black`}
+          color={darkMode ? `#6BC0A8` : `#4B8AA4`}
       />
       <Nav 
         scrolled={scrolled}
