@@ -34,7 +34,7 @@
     @apply flex flex-col items-center h-screen
 }
 .split {
-    @apply flex flex-row
+    @apply flex flex-col
 }
 .circle-image {
     @apply w-64 h-64 rounded-full
@@ -78,5 +78,7 @@
     .title {
         @apply text-7xl
     }
+    .split {
+        @apply flex-row
+    }
 }
-

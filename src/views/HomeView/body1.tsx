@@ -4,7 +4,7 @@ require("../../css/index.css");
 export const Body1 = ({darkMode}) => {
   return (
     <div className={`full-page split ` + (darkMode ? `page-dark` : `page-light`)}>
-      <div className="centered-column justify-center w-1/3">
+      <div className="centered-column justify-center w-full pt-32 sm:w-1/3 sm:pt-16 md:pt-0">
         <img className="circle-image"
           src={'https://avatars.githubusercontent.com/u/46330616?s=400&u=d4130b152c2103dec9dadef214a11a50179c1c8f&v=4'} 
         />
