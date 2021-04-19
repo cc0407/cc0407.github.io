@@ -8,7 +8,7 @@ import {FaArrowAltCircleUp} from 'react-icons/fa';
 
 const Index = () => {
   const [scrolled, setShowScroll] = useState(false)
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
   const scrollTop = () =>{
     window.scrollTo({top: 0, behavior: 'smooth'});
   };
@@ -35,7 +35,7 @@ const Index = () => {
         setDarkMode={setDarkMode}
       />
       <div className="flex flex-col">
-        <Body1 />
+        <Body1 dark={darkMode, setDarkMode}/>
         <Body2 />
       </div>
     </div>
