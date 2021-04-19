@@ -25,7 +25,7 @@
     @apply font-light text-xl max-w-screen-lg pb-2
 }
 .body2 {
-    @apply font-light text-base max-w-screen-lg
+    @apply font-light text-base max-w-screen-md
 }
 .centered-column {
     @apply flex flex-col items-center h-screen
