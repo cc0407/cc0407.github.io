@@ -17,15 +17,16 @@ const Index = () => {
    } else if (scrolled && window.pageYOffset <= 50){
      setShowScroll(false)    
    }  
-   };
-   window.addEventListener('scroll', checkScrollTop)
+  };
+  window.addEventListener('scroll', checkScrollTop)
+
   return (
     <div>
       <FaArrowCircleUp 
           className="scroll-top" 
           onClick={scrollTop} 
-          style={{height: 40, display: scrolled ? 'flex' : 'none'}}
-          size={24}
+          style={{bottom: 10, right: 32, height: 40, display: scrolled ? 'flex' : 'none'}}
+          size={32}
       />
       <Nav 
         scrolled={scrolled}
