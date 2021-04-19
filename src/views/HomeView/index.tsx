@@ -7,11 +7,11 @@ import { Body2 } from "./body2"
 import {FaArrowCircleUp} from 'react-icons/fa';
 
 const Index = () => {
-  const [showScroll, setShowScroll] = useState(false)
+  const [scrolled, setShowScroll] = useState(false)
   const checkScrollTop = () => {    
-    if (!showScroll && window.pageYOffset > 400){
+    if (!scrolled && window.pageYOffset > 50){
      setShowScroll(true)    
-   } else if (showScroll && window.pageYOffset <= 400){
+   } else if (scrolled && window.pageYOffset <= 50){
      setShowScroll(false)    
    }  
    };
@@ -24,10 +24,13 @@ const Index = () => {
       <FaArrowCircleUp 
           className="scroll-top" 
           onClick={scrollTop} 
-          style={{height: 40, display: showScroll ? 'flex' : 'none'}}
+          style={{height: 40, display: scrolled ? 'flex' : 'none'}}
           size={24}
       />
-      <Nav />
+      <Nav 
+        scrolled={scrolled}
+        theme={true}
+      />
       <div className="flex flex-col">
         <Body1 />
         <Body2 />
