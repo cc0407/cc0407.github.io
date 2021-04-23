@@ -34,14 +34,15 @@ module.exports = {
       main: "#333333",
       second: "#6BC0A8",
       tert: "#4B8AA4",
-      quat: "A39F89",
+      quat: "#A39F89",
       
-      accentBlue: "#5a6577",
+      black: "#363052",
+      accentDark: "#e94560",
+      accentLight: "#5a6577",
       mainBlue: "#4b8aa4",
       
       temp: "#6BC0A8",
-      accent: "#e94560",
-      black: "#363052",
+
 
       gray: {
         100: "#f7fafc",

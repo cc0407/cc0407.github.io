@@ -63,7 +63,7 @@
     @apply bg-quatDark text-gray-300 fade
 }
 .link-dark {
-    @apply text-accent fade
+    @apply text-accentDark fade
 }
 .link-dark:hover{
     @apply text-gray-300 fade

@@ -13,7 +13,7 @@ export const Body1 = ({darkMode}) => {
       <div className="left-column justify-center w-2/3">
         <div className="title">Hello!</div>
         <div className="subtitle">
-          My name is Christian Catalano.
+          My name is <span className={(darkMode ? `text-accentDark` : `text-tert`)}>Christian Catalano.</span>
         </div>
         <div className="body2">
           I am currently studying B.Comp Honours Software Engineering, 
