@@ -8,7 +8,7 @@ import {FaArrowAltCircleUp} from 'react-icons/fa';
 
 const Index = () => {
   const [scrolled, setShowScroll] = useState(false)
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
   const scrollTop = () =>{
     window.scrollTo({top: 0, behavior: 'smooth'});
   };

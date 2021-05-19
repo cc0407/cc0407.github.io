@@ -17,7 +17,7 @@ export const Body1 = ({darkMode}) => {
         </div>
         <div className="body2">
           I am currently studying B.Comp Honours Software Engineering, 
-          minoring in Mathematics, at the University of Guelph. With 4+ years of relevant fulltime work experience,
+          minoring in Mathematics, at the University of Guelph. With 4+ years of fulltime work experience in software development,
           I would be a great asset to your team!
         </div>
       </div>
