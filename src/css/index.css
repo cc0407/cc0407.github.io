@@ -4,10 +4,10 @@
 
 
 .full-page {
-    @apply h-screen text-main items-center justify-center flex
+    @apply h-screen items-center justify-center flex
 }
 .nav {
-    @apply fixed left-0 bg-tert w-full h-16 z-10 text-gray-300 items-center flex flex-row justify-between
+    @apply w-full z-10 items-center flex flex-row justify-between fixed shadow-lg
 }
 .nav-options {
     @apply flex flex-row
@@ -18,32 +18,53 @@
 .nav-item {
     @apply px-16
 }
-
-
-.full-page-dark {
-    @apply h-screen bg-backgroundDark text-mainDark items-center justify-center flex
-}
-.nav-dark {
-    @apply absolute left-0 bg-temp w-full h-16 z-10 text-gray-300 items-center flex flex-col
-}
-.link-dark {
-    @apply text-accent
-}
-.link-dark:hover{
-    @apply text-gray-300
-}
-
-
 .title {
     @apply font-light text-4xl
 }
-.body {
-    @apply font-light text-xl
+.subtitle {
+    @apply font-light text-xl max-w-screen-lg pb-2
+}
+.body2 {
+    @apply font-light text-base max-w-screen-md
 }
 .centered-column {
-    @apply flex flex-col items-center
+    @apply flex flex-col items-center h-screen
+}
+.split {
+    @apply flex flex-col
+}
+.circle-image {
+    @apply w-64 h-64 rounded-full
+}
+.left-column {
+    @apply flex flex-col items-start h-screen
+}
+.scroll-top {
+    @apply fixed right-0 bottom-0
 }
 
+.fade {
+    @apply ease-in-out duration-200
+}
+
+.page-light {
+    @apply bg-background text-main fade
+}
+.nav-light {
+    @apply bg-tert text-gray-300 fade
+}
+.page-dark {
+    @apply bg-backgroundDark text-mainDark fade
+}
+.nav-dark {
+    @apply bg-quatDark text-gray-300 fade
+}
+.link-dark {
+    @apply text-accentDark fade
+}
+.link-dark:hover{
+    @apply text-gray-300 fade
+}
 
 @screen xs {
     .title {
@@ -54,5 +75,7 @@
     .title {
         @apply text-7xl
     }
+    .split {
+        @apply flex-row
+    }
 }
-

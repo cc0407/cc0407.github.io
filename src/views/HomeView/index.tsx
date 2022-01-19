@@ -1,20 +1,44 @@
-import React from "react"
+import React, { useState } from "react"
 import { Nav } from "../../components/Nav";
 require("../../css/index.css");
-import Anime from "react-anime";
-import { About } from "./about";
-import { Projects } from "./projects";
+import {SoonBody} from "../ComingSoon/index";
+import { Body1 } from "./body1"
+import { Body2 } from "./body2"
+import {FaArrowAltCircleUp} from 'react-icons/fa';
 
 const Index = () => {
+  const [scrolled, setShowScroll] = useState(false)
+  const [darkMode, setDarkMode] = useState(false)
+  const scrollTop = () =>{
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  };
+  const checkScrollTop = () => {    
+    if (!scrolled && window.pageYOffset > 40){
+     setShowScroll(true)    
+   } else if (scrolled && window.pageYOffset <= 40){
+     setShowScroll(false)    
+   }  
+  };
+  window.addEventListener('scroll', checkScrollTop)
+
   return (
-    <div className="flex flex-col bg-background1">
-      <Anime opacity={[0, 1]} delay={1500} duration={1000} easing={"easeInOutExpo"}>
-        <Nav />
-      </Anime>
-      <Anime opacity={[0, 1]} duration={1000} easing={"easeInExpo"}>
-        <About />
-        <Projects />
-      </Anime>
+    <div>
+      <FaArrowAltCircleUp
+          className="scroll-top fade" 
+          onClick={scrollTop} 
+          style={{bottom: 10, right: 32, height: 40, display: scrolled ? 'flex' : 'none'}}
+          size={32}
+          color={darkMode ? `#6BC0A8` : `#333333`}
+      />
+      <Nav 
+        scrolled={scrolled}
+        dark={darkMode}
+        flipDarkMode={() => setDarkMode(dark => !dark)}
+      />
+      <div className="flex flex-col">
+        <Body1 darkMode={darkMode}/>
+        <Body2 darkMode={darkMode}/>
+      </div>
     </div>
   )
 }
