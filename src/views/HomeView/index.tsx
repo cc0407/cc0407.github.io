@@ -9,20 +9,26 @@ import {FaArrowAltCircleUp} from 'react-icons/fa';
 const Index = () => {
   const [scrolled, setShowScroll] = useState(false)
   const [darkMode, setDarkMode] = useState(false)
+
   const scrollTop = () =>{
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    if( typeof window !== `undefined`)
+      window.scrollTo({top: 0, behavior: 'smooth'});
   };
   const checkScrollTop = () => {    
-    if (!scrolled && window.pageYOffset > 40){
-     setShowScroll(true)    
-   } else if (scrolled && window.pageYOffset <= 40){
-     setShowScroll(false)    
-   }  
+    if( typeof window !== `undefined`) {
+      if (!scrolled && window.pageYOffset > 40){
+        setShowScroll(true)    
+      } else if (scrolled && window.pageYOffset <= 40){
+        setShowScroll(false)    
+      }  
+    }
   };
-  window.addEventListener('scroll', checkScrollTop)
+
+  if( typeof window !== `undefined`)
+    window.addEventListener('scroll', checkScrollTop)
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <FaArrowAltCircleUp
           className="scroll-top fade" 
           onClick={scrollTop} 
@@ -31,13 +37,12 @@ const Index = () => {
           color={darkMode ? `#6BC0A8` : `#333333`}
       />
       <Nav 
-        scrolled={scrolled}
         dark={darkMode}
         flipDarkMode={() => setDarkMode(dark => !dark)}
       />
       <div className="flex flex-col">
         <Body1 darkMode={darkMode}/>
-        <Body2 darkMode={darkMode}/>
+        <Body1 darkMode={darkMode}/>
       </div>
     </div>
   )

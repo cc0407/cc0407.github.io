@@ -1,9 +1,9 @@
 import React from "react"
 import {FaMoon, FaSun} from 'react-icons/fa';
 
-export const Nav = ({scrolled, dark, flipDarkMode}) => {
+export const Nav = ({dark, flipDarkMode}) => {
     return(
-        <div className={(!scrolled ? `h-16` : `h-12`) + ` nav ` + (dark ? `nav-dark` : `nav-light`)}>
+        <div className={`h-72 ` + `nav ` + (dark ? `nav-dark` : `nav-light`)}>
             <div className="nav-item">Christian Catalano</div>
             <div className="nav-options nav-item">
                 <div> ABOUT</div>

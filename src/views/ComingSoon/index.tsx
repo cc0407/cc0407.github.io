@@ -1,6 +1,5 @@
 import React from "react";
 import Anime from "react-anime";
-require("../../css/index.css");
 
 export const SoonBody = () => {
   return (

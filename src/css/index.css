@@ -7,7 +7,7 @@
     @apply h-screen items-center justify-center flex
 }
 .nav {
-    @apply w-full z-10 items-center flex flex-row justify-between fixed shadow-lg
+    @apply w-full z-10 items-center flex flex-row justify-between shadow-lg
 }
 .nav-options {
     @apply flex flex-row
@@ -48,7 +48,7 @@
 }
 
 .page-light {
-    @apply bg-background text-main fade
+    @apply bg-background1 text-main fade
 }
 .nav-light {
     @apply bg-tert text-gray-300 fade
