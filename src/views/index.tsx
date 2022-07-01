@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Head from "../components/Head";
@@ -21,12 +21,13 @@ export const Homepage = () => {
   );
 };
 
-const language = [
+const languageList = [
   {lang: "English", text: "Hello"},
   {lang: "Italian", text: "Ciao"},
   {lang: "Russian", text: "привет"},
-  {lang: "French", text: "Bonjour"},
+  {lang: "French",  text: "Bonjour"},
   {lang: "Finnish", text: "Hei"},
+  {lang: "Swedish", text: "Hej"},
 ]
 // This is the Body of the page, does not include header, nav, or footer
 // Custom props are defined in this interface
@@ -34,22 +35,13 @@ interface props {}
 // Default values are defined in this interface
 const defaultProps: Partial<props> = {};
 export const Intro: React.FC<props> = () => {
+  const [lang, setLang] = useState(0);
   /* Changes all letters except spaces in provided text to a random character */
-  const nameRef = useRef();
   function changeLanguage(e) {
-    const langSelect = Math.floor(Math.random() * (language.length));
-    setText(language[langSelect].text, language[langSelect].lang, nameRef);
-  }
-  function setText(text: string, language: string | undefined, ref: any) {
-    if (ref.current) {
-      if(ref.current.innerText == text) {
-        changeLanguage(null);
-      }
-      else {
-        ref.current.innerText = text;
-        ref.current.title = language;
-      }
-    }
+    var langSelect = lang;
+    while(langSelect == lang)
+      langSelect = Math.floor(Math.random() * (languageList.length));
+      setLang(langSelect);
   }
   /*-----------------------------------------------------------------*/
 
@@ -68,14 +60,8 @@ export const Intro: React.FC<props> = () => {
         </div>
 
         <div className=" column homeContent ">
-          <div className="homeTitle min-w-[213px]">
-            <span
-              ref={nameRef}
-              onMouseOver={changeLanguage}
-            >
-              Hello
-            </span>
-            !
+          <div className="homeTitle" onMouseOver={changeLanguage}>
+              {languageList[lang].text}!
           </div>
           <div className="homeSubtitle">
             I'm <span className="font-bold">Christian Catalano</span>.
