@@ -2,8 +2,6 @@ import React from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Head from "../components/Head";
-import ImageSwap from "../components/ImageSwap";
-import Intro from "../components/Intro";
 
 // This is a high-level view of what the page will be
 export const Homepage = () => {
@@ -30,30 +28,34 @@ interface props {}
 // Default values are defined in this interface
 const defaultProps: Partial<props> = {};
 
-const Sample: React.FC<props> = () => {
+export const Intro: React.FC<props> = () => {
   return (
-    <div className="bg-offWhite text-darkBlue column page-width text-center justify-center items-center flex-grow-default overflow-x-hidden min-h-[700px]">
-      <ImageSwap
-        desktopImg={""}
-      />
-      <div className="h-full w-full z-10 column items-center">
-        <div className="homeContent homeSpacing">
+    <div className={"w-full column centered bg-offWhite min-h-128 flex-grow-default"}>
 
-          <div className="homeTitle">Sample Page</div>
-          <div>
-            This page can be used to determine how a page should look
+      <div className="adjustableRow homeIntroRow homeIntroPadding">
+        <div className="column centered py-4 800:px-10 flex-shrink-0">
+          {/* DIV BELOW to be replaced with commented img tag, once i have a picture */}
+          <div className="circle-image"></div> 
+          {/* <img className="circle-image" src={''} /> */}
+          <div className="font-light">^ That's me! ^</div>
+        </div>
+
+        <div className=" column homeContent ">
+          <div className="homeTitle">Hello!</div>
+          <div className="homeSubtitle">
+            I'm <span className="font-bold">Christian&nbsp;Catalano</span>.
           </div>
-
-          <div className="homeTitle homeSpacing">Second Heading</div>
-          <div>
-            Lorem Ipsum
+          <div className="homeBody">
+            I am currently studying B.Comp Honours Software Engineering, 
+            minoring in Mathematics, at the University of Guelph. With 4+ years of fulltime work experience in software development,
+            I would be a great asset to your team!
           </div>
-
         </div>
       </div>
+
     </div>
-  );
+  )
 };
 
-Sample.defaultProps = defaultProps;
+Intro.defaultProps = defaultProps;
 export default Homepage;
