@@ -1,12 +1,14 @@
 import React from "react";
 import GenericImage from "./GenericImage";
-// IMPORT THE LOGO HERE
+//@ts-ignore
+import LogoLong from "../../img/logos/LogoLong.png";
 
 export const MainLogo: React.FC = () => {
-    const info = "Main Logo"; // THIS IS THE ALT TEXT FOR YOUR LOGO
+    const info = "Catalano"; // THIS IS THE ALT TEXT FOR YOUR LOGO
     return (
         <GenericImage 
-            src={""} // CHANGE THIS TO BE THE LOGO IMPORTED ABOVE
+            className="text-white"
+            src={LogoLong} // CHANGE THIS TO BE THE LOGO IMPORTED ABOVE
             title={info} 
             alt={info} 
         />
