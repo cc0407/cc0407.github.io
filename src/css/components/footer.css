@@ -5,8 +5,7 @@
 .footer-links                   { @apply flex flex-col justify-evenly mb-0 h-16 items-center w-screen }
 @screen 768  {.footer-links     { @apply justify-between w-64 mb-4 max-w-xs h-12 }}
 
-.footer-link                    { @apply text-sm py-1 w-32 }
+.footer-link                    { @apply text-sm pt-2 pb-4 w-32 text-LightGray3 }
 .footer-link:hover              { @apply underline }
 
-.social-buttons                 { @apply flex flex-row items-center justify-between text-lg text-white w-48 h-16 }
-@screen 768  {.social-buttons   { @apply mt-1 pt-2 }}
+.social-buttons                 { @apply flex flex-row items-center justify-between text-lg text-white w-32 h-16 }
