@@ -3,7 +3,7 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Head from "../components/Head";
 import ImageSwap from "../components/ImageSwap";
-import About from "../components/About";
+import Intro from "../components/Intro";
 
 // This is a high-level view of what the page will be
 export const Homepage = () => {
@@ -17,7 +17,7 @@ export const Homepage = () => {
       <Nav 
         active={0} // Active refers to the position on the nav bar, makes it bolded
       />
-      <About />
+      <Intro />
       <Footer />
     </div>
   );
@@ -37,14 +37,14 @@ const Sample: React.FC<props> = () => {
         desktopImg={""}
       />
       <div className="h-full w-full z-10 column items-center">
-        <div className="sampleContent sampleSpacing">
+        <div className="homeContent homeSpacing">
 
-          <div className="sampleTitle">Sample Page</div>
+          <div className="homeTitle">Sample Page</div>
           <div>
             This page can be used to determine how a page should look
           </div>
 
-          <div className="sampleTitle sampleSpacing">Second Heading</div>
+          <div className="homeTitle homeSpacing">Second Heading</div>
           <div>
             Lorem Ipsum
           </div>

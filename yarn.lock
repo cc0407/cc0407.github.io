@@ -1083,6 +1083,11 @@
   "resolved" "https://registry.npmjs.org/@fontsource/aileron/-/aileron-4.5.3.tgz"
   "version" "4.5.3"
 
+"@fontsource/catamaran@^4.5.7":
+  "integrity" "sha512-1t24Uxj86jl8vEljxkk2xonwDTYyaPKFuO0ibypFIR9i3v7H2xVwZt01087P6I/JIdshZrMrCq7e/nvzsNYGsQ=="
+  "resolved" "https://registry.npmjs.org/@fontsource/catamaran/-/catamaran-4.5.7.tgz"
+  "version" "4.5.7"
+
 "@gatsbyjs/parcel-namer-relative-to-cwd@^1.2.0":
   "integrity" "sha512-4iIdquFDl+b+U8Ng0dg6dCtxB/cnH27ERrlQQlxfdaWe8e9CLo8aWc6u3UeuHwNJixBFOUbOgEFaA5qCUPwLCQ=="
   "resolved" "https://registry.npmjs.org/@gatsbyjs/parcel-namer-relative-to-cwd/-/parcel-namer-relative-to-cwd-1.2.0.tgz"

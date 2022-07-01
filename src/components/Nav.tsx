@@ -34,9 +34,9 @@ const links = [
   /*
     i.e: {href:"/contact-us", name:"Contact Us"},
   */
+  {href:"/", name:"Contact"},
   {href:"/", name:"Work Experience"}, 
   {href:"/", name:"Personal Projects"}, 
-  {href:"/", name:"Contact"},
 ];
 
 interface props extends HTMLProps<any> {

@@ -285,7 +285,8 @@ module.exports = {
       default: "1",
     },
     fontFamily: {
-      aileron: "Aileron",
+      aileron: ["Aileron","sans-serif",],
+      catamaran: ["Catamaran","sans-serif",],
       sans: [
         "system-ui",
         "-apple-system",

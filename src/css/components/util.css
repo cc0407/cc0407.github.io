@@ -12,7 +12,7 @@
 
 /* CHANGES FROM COLUMN ON MOBILE, TO ROW ON DESKTOP */
 .adjustableRow                          { @apply flex flex-col }
-@screen 1024 {.adjustableRow            { @apply flex flex-row }}
+@screen 800  {.adjustableRow            { @apply flex flex-row }}
 
 .column                                 { @apply flex flex-col }
 .row                                    { @apply flex flex-row }

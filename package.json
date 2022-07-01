@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@fontsource/aileron": "^4.5.3",
+    "@fontsource/catamaran": "^4.5.7",
     "@types/react-helmet": "^6.1.5",
     "gatsby": "^4.17.2",
     "gatsby-cli": "^4.3.0",
