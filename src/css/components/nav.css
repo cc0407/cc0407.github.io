@@ -1,6 +1,6 @@
 .nav                            { @apply w-full z-50 items-center flex flex-row justify-between text-white }
 
-.nav-height                     { @apply h-16 }
+.nav-height                     { @apply h-14 }
 
 .nav-logo > img                 { @apply text-center }
 .nav-logo                       { @apply w-40 z-50 flex-grow-0 ml-2 mr-4 flex-shrink-0 py-2 object-scale-down }

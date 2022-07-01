@@ -27,7 +27,7 @@ export const Footer:React.FC<props> = (props) => {
       <a
         className={"footer-link"}
         target={"_self"}
-        href="/"
+        href="/contact"
       >
         Contact
       </a>

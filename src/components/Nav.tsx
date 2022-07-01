@@ -34,7 +34,7 @@ const links = [
   /*
     i.e: {href:"/contact-us", name:"Contact Us"},
   */
-  {href:"/", name:"Contact"},
+  {href:"/contact", name:"Contact"},
   {href:"/", name:"Work Experience"}, 
   {href:"/", name:"Personal Projects"}, 
 ];
@@ -51,7 +51,7 @@ const defaultProps: Partial<props> = { //Declared here, implemented at bottom of
 
 export const Nav: React.FC<props> = (props) => {
   return (
-    <div className={`nav-height nav bg-darkBlue ` + props.className + (props.main ? `` : `border-1 border-brightRed border-t-0 border-l-0 border-r-0`)}>
+    <div className={`nav-height nav bg-darkBlue ` + props.className }>
 
       <a className="nav-logo" href="/">
         <MainLogo/>
