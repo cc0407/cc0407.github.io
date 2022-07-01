@@ -1,0 +1,13 @@
+.contactContent                     { @apply justify-center items-center flex-grow-default cursor-default z-10 text-4 }
+@screen 360 {.contactContent        { @apply text-5 }}
+@screen 768 {.contactContent        { @apply text-7 }}
+
+.contactTitle                       { @apply text-10 font-bold text-darkBlue leading-none pt-8 }
+@screen 768 {.contactTitle          { @apply text-14 }}
+
+.contactSubtitle                    { @apply text-7 font-bold text-lightBlue leading-none pb-2 }
+@screen 360 {.contactSubtitle       { @apply text-8 }}
+@screen 768 {.contactSubtitle       { @apply text-10 }}
+
+.contactTextLink                   { @apply underline whitespace-nowrap px-1 cursor-pointer }
+.contactTextLink:hover             { @apply text-white bg-darkBlue rounded-1 underline }

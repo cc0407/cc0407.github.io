@@ -30,20 +30,22 @@ const defaultProps: Partial<props> = {};
 
 const ContactBody: React.FC<props> = () => {
   return (
-    <div className="bg-offWhite text-darkBlue column page-width text-center justify-center items-center flex-grow-default overflow-x-hidden min-h-[700px]">
-      <ImageSwap
-        desktopImg={""}
-      />
-      <div className="h-full w-full z-10 column items-center">
-        <div className="homeContent homeSpacing">
-
-          <div className="homeTitle">Contact</div>
-          <div>
-            This page can be used to determine how a page should look
-          </div>
-
+    <div className="bg-offWhite text-darkBlue column page-width text-center items-center flex-grow-default overflow-x-hidden ">
+        <div className="contactTitle">Contact</div>
+        <div className="column centered contactContent ">
+            <div className="contactSubtitle">
+                Business Inquiries
+            </div>
+            <div>
+                Please send an email to: <a className="contactTextLink" href="mailto:christiancatalano@outlook.com?subject=Business Inquiry - ">christiancatalano@outlook.com</a>
+            </div>
+            <div className="contactSubtitle pt-16">
+                Other Communication
+            </div>
+            <div>
+                Feel free to message me on&#8198;<a className="contactTextLink" href="https://www.linkedin.com/in/christian-catalano/" target="_blank">LinkedIn</a>!
+            </div>
         </div>
-      </div>
     </div>
   );
 };

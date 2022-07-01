@@ -15,7 +15,8 @@ a                               { @apply text-center }
 @screen 1440 {.subtitle         { @apply text-4xl }}
 
 .page-width                     { @apply px-0 max-w-full }
-@screen 360  {.page-width       { @apply px-4 }}
+@screen 360  {.page-width       { @apply px-2 }}
+@screen 400  {.page-width       { @apply px-4 }}
 @screen 640  {.page-width       { @apply px-8 }}
 @screen 1024 {.page-width       { @apply px-16 }}
 @screen 1280 {.page-width       { @apply px-24 }}

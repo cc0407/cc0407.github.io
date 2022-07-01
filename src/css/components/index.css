@@ -6,7 +6,7 @@
 @screen 800  {.homeContent      { @apply h-auto }}
 
 .homeTitle                      { @apply text-12 font-bold text-lightBlue leading-none }
-@screen 440  {.homeTitle        { @apply text-[3.25rem] }}
+@screen 440  {.homeTitle        { @apply text-13 }}
 @screen 500  {.homeTitle        { @apply text-14 }}
 
 .homeSubtitle                   { @apply text-7 leading-tight py-3 }
