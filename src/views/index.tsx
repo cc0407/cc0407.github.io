@@ -35,22 +35,18 @@ interface props {}
 // Default values are defined in this interface
 const defaultProps: Partial<props> = {};
 export const Intro: React.FC<props> = () => {
+  /*--- Changes 'Hello' to random language from list ---*/
   const [lang, setLang] = useState(0);
-  /* Changes all letters except spaces in provided text to a random character */
   function changeLanguage(e) {
     var langSelect = lang;
     while(langSelect == lang)
       langSelect = Math.floor(Math.random() * (languageList.length));
       setLang(langSelect);
   }
-  /*-----------------------------------------------------------------*/
+  /*----------------------------------------------------*/
 
   return (
-    <div
-      className={
-        "w-full column centered bg-offWhite min-h-128 flex-grow-default"
-      }
-    >
+    <div className="w-full column centered bg-offWhite min-h-128 flex-grow-default">
       <div className="adjustableRow homeIntroRow homeIntroPadding">
         <div className="column centered py-4 800:px-10 flex-shrink-0">
           {/* DIV BELOW to be replaced with commented img tag, once i have a picture */}

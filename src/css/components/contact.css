@@ -9,5 +9,5 @@
 @screen 360 {.contactSubtitle       { @apply text-8 }}
 @screen 768 {.contactSubtitle       { @apply text-10 }}
 
-.contactTextLink                   { @apply underline whitespace-nowrap px-1 cursor-pointer }
-.contactTextLink:hover             { @apply text-white bg-darkBlue rounded-1 underline }
+.contactTextLink                    { @apply underline whitespace-nowrap px-1 cursor-pointer }
+.contactTextLink:hover              { @apply text-white bg-darkBlue rounded-1 underline }

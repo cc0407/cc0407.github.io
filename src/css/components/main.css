@@ -1,4 +1,4 @@
-html                            { @apply font-catamaran overflow-x-hidden}
+html                            { @apply font-catamaran overflow-x-hidden }
 @screen 1024 {html              { @apply overflow-y-scroll }}
 
 a                               { @apply text-center }
