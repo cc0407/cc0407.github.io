@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React, { HTMLProps, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import MainLogo from "./Img/MainLogo"
@@ -53,9 +54,9 @@ export const Nav: React.FC<props> = (props) => {
   return (
     <div className={`nav-height nav bg-darkBlue ` + props.className }>
 
-      <a className="nav-logo" href="/">
+      <Link className="nav-logo" to="/">
         <MainLogo/>
-      </a>
+      </Link>
 
       <Bar>      
         <div className="nav-item items-center justify-around nav-link-list nav-link-size">
@@ -65,14 +66,13 @@ export const Nav: React.FC<props> = (props) => {
                 // props.active is used to highlight the page that is currently being displayed
                 // (i+1) because (i == 0) is used for the home page (no links are active)
                 links.map(function(link, i) {
-                    return <a
+                    return <Link
                       className={`hover:text-white ` + (props.active == (i+1)? `font-bold text-white` : `text-LightGray2 `)}
-                      target={"_self"}
-                      href={link.href}
+                      to={link.href}
                       key={i}
                     >
                     {link.name}
-                  </a>
+                  </Link>
                 })
               }
           </div>
