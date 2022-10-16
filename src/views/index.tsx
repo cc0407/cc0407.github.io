@@ -51,11 +51,8 @@ export const Intro: React.FC<props> = () => {
   return (
     <div className="w-full column centered bg-offWhite min-h-128 flex-grow-default">
       <div className="adjustableRow homeIntroRow homeIntroPadding">
-        <div className="column centered py-4 800:px-10 flex-shrink-0">
-          {/* DIV BELOW to be replaced with commented img tag, once i have a picture */}
-          <div className="circle-image"></div>
-          {/* <img className="circle-image" src={''} /> */}
-          <div className="font-light">^ That's me ^</div>
+        <div className="column centered py-4 800:px-10 flex-shrink-0 object-cover">
+          <img className="circle-image" src={'https://avatars.githubusercontent.com/u/46330616'} />
         </div>
 
         <div className=" column homeContent ">
