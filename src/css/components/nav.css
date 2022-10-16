@@ -16,7 +16,7 @@
 .nav-desktop                    { @apply hidden }
 @screen 800  {.nav-desktop      { @apply flex flex-grow-default max-w-screen-500 }}
 
-.nav-mobile                     { @apply flex flex-col w-64 h-128 align-top z-40 top-0 right-0 absolute flex-grow-default items-end bg-darkBlue }
+.nav-mobile                     { @apply flex flex-col w-64 h-64 align-top z-40 top-0 right-0 absolute flex-grow-default items-end bg-darkBlue }
 @screen 800  {.nav-mobile       { @apply hidden }}
 
 .icon                           { @apply h-20 mr-5 }
