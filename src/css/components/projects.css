@@ -1,1 +1,4 @@
-.projectListItem   { @apply w-72 h-12 my-4 rounded-2 flex justify-center items-center bg-main text-white underline select-none }
+.projectListItem            { @apply w-72 h-12 my-4 rounded-2 flex justify-center items-center bg-main text-white underline select-none }
+
+.projectTitle               { @apply text-10 mt-4}
+@screen 400{.projectTitle   { @apply text-12 }}
