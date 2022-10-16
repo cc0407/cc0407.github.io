@@ -31,7 +31,7 @@ export const AllProjects: React.FC<props> = (props) => {
                         if(project.type == props.type) {
                             return(
                                 <li key={project.name}>
-                                    <a href={project.link} target="_blank">
+                                    <a className="projectListItem" href={project.link} target="_blank">
                                         {project.name}
                                     </a>
                                 </li>

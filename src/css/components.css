@@ -11,5 +11,6 @@
     @import "./components/util.css";
     /*--- More CSS files go here ---*/
     @import "./components/contact.css";
+    @import "./components/projects.css";
     /*---   End more CSS files   ---*/
 }
