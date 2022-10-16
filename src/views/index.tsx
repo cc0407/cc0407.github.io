@@ -43,6 +43,9 @@ export const Intro: React.FC<props> = () => {
       langSelect = Math.floor(Math.random() * (languageList.length));
       setLang(langSelect);
   }
+  function resetLang(e) {
+    setLang(0);
+  }
   /*----------------------------------------------------*/
 
   return (
@@ -56,7 +59,7 @@ export const Intro: React.FC<props> = () => {
         </div>
 
         <div className=" column homeContent ">
-          <div className="homeTitle" onMouseOver={changeLanguage}>
+          <div className="homeTitle" onMouseEnter={changeLanguage} onMouseLeave={resetLang}>
               {languageList[lang].text}!
           </div>
           <div className="homeSubtitle">
