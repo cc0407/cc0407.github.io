@@ -35,7 +35,7 @@ const links = [
     i.e: {href:"/contact-us", name:"Contact Us"},
   */
   // {href:"/contact", name:"Contact"},
-  {href:"/projects?work", name:"Work Experience"}, 
+  {href:"/experience", name:"Work Experience"}, 
   {href:"/projects", name:"Personal Projects"}, 
 ];
 
