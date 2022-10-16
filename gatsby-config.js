@@ -8,7 +8,7 @@ const siteAuthor = "AUTHOR";
 /*------------ Optional Customizations ------------*/
 /* Google Analytics, Tag Manager, and Ad Words IDs */
 const gtmID = "" // i.e. "GTM-AA1AAA1"
-const gaID = ""  // i.e. "UA-111111111-1"
+const gaID = "G-0KNTLP1JFK"  // i.e. "UA-111111111-1"
 const awID = ""  // i.e. "AW-11111111111"
 /*-------------------------------------------------*/
 
@@ -64,7 +64,7 @@ module.exports = {
         includeInDevelopment: false,
       },
     },*/
-    /*{
+    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
@@ -85,7 +85,7 @@ module.exports = {
           respectDNT: true,
         },
       },
-    },*/
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
