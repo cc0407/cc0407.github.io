@@ -3,27 +3,27 @@
 .nav-height                     { @apply h-14 }
 
 .nav-logo > img                 { @apply text-center }
-.nav-logo                       { @apply w-40 z-50 flex-grow-0 ml-2 mr-4 flex-shrink-0 py-2 object-scale-down }
-@screen 800  {.nav-logo         { @apply flex-shrink-default }}
-@screen 1024 {.nav-logo         { @apply flex-shrink-0 }}
+.nav-logo                       { @apply w-40 z-50 flex-grow-0 ml-6 mr-4 flex-shrink-0 py-2 object-scale-down }
 @screen 1280 {.nav-logo         { @apply ml-6 }}
 @screen 1921 {.nav-logo         { @apply absolute }}
 
 .nav-link-list                  { @apply w-full h-full flex-col mr-0 flex items-center justify-end }
-@screen 800  {.nav-link-list    { @apply flex-row static h-full bg-transparent }}
+@screen 640  {.nav-link-list    { @apply flex-row static h-full bg-transparent }}
 @screen 1921 {.nav-link-list    { @apply justify-center max-w-6xl }}
 
 .nav-desktop                    { @apply hidden }
-@screen 800  {.nav-desktop      { @apply flex flex-grow-default max-w-screen-500 }}
+@screen 640  {.nav-desktop      { @apply flex flex-grow-default max-w-screen-500 }}
 
 .nav-mobile                     { @apply flex flex-col w-64 h-64 align-top z-40 top-0 right-0 absolute flex-grow-default items-end bg-darkBlue }
-@screen 800  {.nav-mobile       { @apply hidden }}
+@screen 640  {.nav-mobile       { @apply hidden }}
 
 .icon                           { @apply h-20 mr-5 }
 @screen 800  {.icon             { @apply hidden }}
 
 .page-links                     { @apply flex flex-col justify-around flex-grow-default }
-@screen 800  {.page-links       { @apply flex flex-row }}
+@screen 640  {.page-links       { @apply flex flex-row justify-end space-x-12 mr-6}}
+@screen 1280 {.page-links       { @apply mr-12}}
+@screen 1921 {.page-links       { @apply justify-center mr-0 }}
 
 .button-links                   { @apply flex flex-col h-32 justify-around w-48 text-lg }
 @screen 800  {.button-links     { @apply h-10 flex-row items-center content-around py-10 w-64 pr-2 }}
@@ -33,5 +33,3 @@
 @screen 1921 {.nav-hybrid-row   { @apply justify-center }}
 
 .nav-link-size                  { @apply text-lg }
-@screen 800  { .nav-link-size   { @apply text-base }}
-@screen 1024 { .nav-link-size   { @apply text-lg }}
