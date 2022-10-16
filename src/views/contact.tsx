@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Head from "../components/Head";
@@ -30,7 +30,6 @@ const defaultProps: Partial<props> = {};
 const ContactBody: React.FC<props> = () => {
   return (
     <div className="bg-offWhite text-darkBlue column page-width text-center items-center flex-grow-default overflow-x-hidden ">
-      <div className="contactTitle">Contact</div>
       <div className="column centered contactContent ">
         <div className="contactSubtitle">Business Inquiries</div>
         <div>

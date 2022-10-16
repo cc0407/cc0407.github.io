@@ -17,20 +17,20 @@ export const Footer:React.FC<props> = (props) => {
 
       <div className="social-buttons">
         <a href="https://github.com/cc0407" target="blank" className="hover:text-LightGray2">
-          <FaGithub className="cursor-pointer" size={'2em'} title="Twitter" />
+          <FaGithub className="cursor-pointer" size={'2em'} title="Github" />
         </a>
         <a href="https://www.linkedin.com/in/christian-catalano/" target="blank" className="hover:text-LightGray2">
-          <FaLinkedin className="cursor-pointer" size={'2em'} title="Facebook"/>
+          <FaLinkedin className="cursor-pointer" size={'2em'} title="LinkedIn"/>
         </a>
       </div>
 
-      <a
+      {/* <a
         className={"footer-link"}
         target={"_self"}
         href="/contact"
       >
         Contact
-      </a>
+      </a> */}
 
     </div>
   );
