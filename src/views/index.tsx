@@ -43,7 +43,7 @@ export const Intro: React.FC<props> = () => {
   /*----------------------------------------------------*/
 
   return (
-    <div className="w-full column centered min-h-128 flex-grow-default">
+    <div className="w-full column centered flex-grow-default">
       <div className="adjustableRow homeIntroRow homeIntroPadding">
         <div className="column centered py-4 800:px-10 flex-shrink-0 object-cover">
           <img className="circle-image" src={'https://avatars.githubusercontent.com/u/46330616'} />

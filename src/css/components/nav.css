@@ -1,29 +1,26 @@
 .nav                                { @apply backdrop-blur w-full h-12 bg-transparent z-50 flex flex-row justify-between text-white fixed py-2 px-4 }
 @screen 1921 {.nav                  { @apply justify-center }}
 
-.icon                               { @apply w-auto h-full cursor-pointer z-50 flex-shrink-0 text-black box-content }
-@screen 500  {.icon                 { @apply hidden }}
+.icon                               { @apply w-auto h-full z-50 flex-shrink-0 box-content }
 
 /* the drop down after you click on the icon */
 .nav-overlay                        { @apply w-screen h-screen fixed top-0 left-0 bg-darkBlue opacity-80 }
-@screen 500  {.nav-overlay          { @apply hidden}}
+@screen 640  {.nav-overlay          { @apply hidden}}
 
 .nav-opened                         { @apply duration-200 !visible !translate-y-0 }
-@screen 500  {.nav-opened           { @apply duration-[0ms] }}
+@screen 640  {.nav-opened           { @apply duration-[0ms] }}
 
-.nav-link-active                    { @apply text-white !font-bold bg-main }
-.nav-link                           { @apply flex justify-start items-center pl-3 py-2 w-full select-none my-1 font-semibold rounded-2 text-left } /* Common styles across all link types */
-@screen 500  {
+.nav-item                           { @apply text-black cursor-pointer }
+.nav-item:hover                     { @apply opacity-75}
+
+.nav-link-active                    { @apply text-white bg-main }
+.nav-link                           { @apply flex justify-start items-center pl-3 py-2 w-full select-none my-1 font-bold rounded-2 } /* Common styles across all link types */
+@screen 640  {
     .nav-link		                { @apply justify-center px-2 py-0 h-full w-28 my-0 text-center }
-    .nav-link-inactive:hover		{ @apply text-LightGray4 }
-    .nav-link-active                { @apply text-white !font-bold bg-main }
-    .nav-link-inactive              { @apply text-black }
     .nav-link-mobile                { @apply hidden }
 }
 
 .page-link-wrapper                  { @apply z-[49] w-full h-auto pb-4 text-darkBlue text-xl bg-white fixed top-0 left-0 pt-12 -translate-y-full ease-in-out px-4 }
-@screen 500  {.page-link-wrapper    { @apply gap-5 w-auto h-full visible flex flex-row justify-end items-center p-0 my-0 text-lg bg-transparent static translate-y-0  }}
+@screen 640  {.page-link-wrapper    { @apply gap-5 w-auto h-full visible flex flex-row justify-end items-center p-0 my-0 text-lg bg-transparent static translate-y-0  }}
 
-.social-buttons                     { @apply flex flex-row justify-end gap-5 z-50 h-full }
-.social-button                      { @apply h-full w-auto cursor-pointer }
-.social-button:hover                { @apply opacity-75 }
+.social-buttons                     { @apply flex flex-row justify-end gap-5 h-full }
