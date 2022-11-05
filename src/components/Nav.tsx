@@ -8,19 +8,35 @@ import { Link } from "gatsby";
 // Used to switch between mobile and desktop navigations
 // nav-desktop is only visible on 800px+ viewports, mobile only visible on logical negation
 interface barProps extends HTMLProps<any> {
-  state: boolean;
-  setState: React.Dispatch<React.SetStateAction<boolean>>
+  active?: showPage
 }
 const Bar:React.FC<barProps> = (props) => {
   return(
-    <>
-      <div className="nav-links-desktop">
-        {props.children}
-      </div>
-      <div className={"nav-links-mobile" + (props.state ? " nav-opened" : "")} >
-          {props.children}
-      </div>
-    </>
+    <div className="page-link-wrapper">
+                  <>{
+                    // props.active is used to highlight the page that is currently being displayed
+                    links.map(function(link, i) {
+                        console.log(link)
+                        return <>
+                          {link.linkType == "internal" 
+                          ? <Link
+                              className={link.type + (props.active == link.page ? ' nav-link nav-link-active' : ' nav-link nav-link-inactive')}
+                              to={link.href}
+                            >
+                              {link.name}
+                            </Link>
+                          : <a
+                              className={link.type + (props.active == link.page ?  ' nav-link nav-link-active' : ' nav-link nav-link-inactive')}
+                              href={link.href}
+                            >
+                              {link.name}
+                            </a>}
+                        </>
+                    })
+                    
+                  }
+                </>
+            </div>
   )
 }
 
@@ -56,46 +72,23 @@ export const Nav: React.FC<props> = (props) => {
   return (
     <>
       <div className="nav-placeholder"/>
+      
       <div className={"nav " + props.className}>
-
         {clicked // Swap icon and display overlay if mobile menu is open
-          ? <> 
-              <div className="nav-overlay" onClick={() => {setClicked(false)}}/>
-              <RiMenuFoldLine size={44} className={"icon"} onClick={()=> {setClicked(false)}}/>
-            </>
+          ? <RiMenuFoldLine size={44} className={"icon"} onClick={()=> {setClicked(false)}}/>
           : <RiMenuLine size={44} className={"icon"} onClick={()=> {setClicked(true)}}/>
         }
         <Link to="/">
           <MainLogo/>
         </Link>
+        <div className="nav-links-desktop">   
+            <Bar active={props.active}/>
+        </div>
+      </div>
 
-        <Bar state={clicked} setState={setClicked}>      
-            <div className="page-link-wrapper">
-                  <>{
-                    // props.active is used to highlight the page that is currently being displayed
-                    links.map(function(link, i) {
-                        console.log(link)
-                        return <>
-                          {link.linkType == "internal" 
-                          ? <Link
-                              className={link.type + (props.active == link.page ? ' nav-link nav-link-active' : ' nav-link nav-link-inactive')}
-                              to={link.href}
-                            >
-                              {link.name}
-                            </Link>
-                          : <a
-                              className={link.type + (props.active == link.page ?  ' nav-link nav-link-active' : ' nav-link nav-link-inactive')}
-                              href={link.href}
-                            >
-                              {link.name}
-                            </a>}
-                        </>
-                    })
-                    
-                  }
-                </>
-            </div>
-        </Bar>
+      {clicked && <div className="nav-overlay" onClick={() => {setClicked(false)}}/>}
+      <div className={"nav-links-mobile" + (clicked ? " nav-opened" : "")} >
+        <Bar active={props.active}/>
       </div>
     </>
   );
