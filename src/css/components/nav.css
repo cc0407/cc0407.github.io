@@ -1,4 +1,4 @@
-.nav                                { @apply backdrop-blur w-full h-12 bg-transparent z-50 flex flex-row justify-between text-white fixed py-2 px-4 }
+.nav                                { @apply backdrop-blur w-full h-12 bg-transparent z-50 flex flex-row justify-between text-white fixed py-2 px-4 top-0 left-0}
 @screen 1921 {.nav                  { @apply justify-center }}
 
 .icon                               { @apply w-auto h-full z-50 flex-shrink-0 box-content }

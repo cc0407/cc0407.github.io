@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 import Seo from "../components/SeoComponent";
 
 // This is a high-level view of what the page will be

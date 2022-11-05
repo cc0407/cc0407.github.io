@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 import Seo from "../components/SeoComponent";
 
 // This is a high-level view of what the page will be
 export const Homepage = () => {
   return (
-    <div className="min-h-screen column bg-offWhite">
+    <div className="min-h-screen column box-border">
       <Nav 
         active={"Home"} // Active refers to the position on the nav bar, makes it bolded
       />
@@ -43,7 +42,7 @@ export const Intro: React.FC<props> = () => {
   /*----------------------------------------------------*/
 
   return (
-    <div className="w-full column centered flex-grow-default">
+    <div className="w-full column centered flex-grow-default px-4">
       <div className="adjustableRow homeIntroRow homeIntroPadding">
         <div className="column centered py-4 800:px-10 flex-shrink-0 object-cover">
           <img className="circle-image" src={'https://avatars.githubusercontent.com/u/46330616'} />

@@ -1,6 +1,5 @@
 import React from "react";
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 import AllProjects from "../components/AllProjects";
 import Seo from "../components/SeoComponent";
 

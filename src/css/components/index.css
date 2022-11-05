@@ -1,4 +1,4 @@
-.homeIntroRow                   { @apply max-w-[550px] mx-6 }
+.homeIntroRow                   { @apply max-w-[550px]}
 @screen 800  {.homeIntroRow     { @apply max-w-screen-800 }}
 @screen 1024 {.homeIntroRow     { @apply max-w-screen-1024 }}
 
