@@ -16,11 +16,11 @@ export const Footer:React.FC<props> = (props) => {
     <div className={`footer ` + (props.homepage? `bg-black ` : `bg-darkBlue `) + `border-t-4 border-opacity-100 border-darkBlue2 column items-center justify-center ` + props.className}>
 
       <div className="social-buttons">
-        <a href="https://github.com/cc0407" target="blank" className="hover:text-LightGray2">
-          <FaGithub className="cursor-pointer" size={'2em'} title="Github" />
+        <a href="https://github.com/cc0407" target="blank">
+          <FaGithub className="social-button" title="Github" />
         </a>
-        <a href="https://www.linkedin.com/in/christian-catalano/" target="blank" className="hover:text-LightGray2">
-          <FaLinkedin className="cursor-pointer" size={'2em'} title="LinkedIn"/>
+        <a href="https://www.linkedin.com/in/christian-catalano/" target="blank">
+          <FaLinkedin className="social-button" title="LinkedIn"/>
         </a>
       </div>
 

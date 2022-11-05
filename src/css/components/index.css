@@ -2,7 +2,8 @@
 @screen 800  {.homeIntroRow     { @apply max-w-screen-800 }}
 @screen 1024 {.homeIntroRow     { @apply max-w-screen-1024 }}
 
-.homeContent                    { @apply justify-center items-start flex-grow-default cursor-default h-76 }
+.homeContent                    { @apply justify-center items-start flex-grow-default cursor-default h-104 }
+@screen 360  {.homeContent      { @apply h-92 }}
 @screen 800  {.homeContent      { @apply h-auto }}
 
 .homeTitle                      { @apply text-12 font-bold text-lightBlue leading-none }
@@ -21,4 +22,5 @@
 .homeTextLink                   { @apply underline whitespace-nowrap }
 .homeTextLink:hover             { @apply text-white bg-lightBlue rounded-1 no-underline }
 
-.circle-image                   { @apply w-64 h-64 rounded-full bg-darkBlue }
+.circle-image                   { @apply w-48 h-48 rounded-full bg-darkBlue }
+@screen 360  {.circle-image     { @apply w-64 h-64 }}

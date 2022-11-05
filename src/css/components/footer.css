@@ -1,6 +1,5 @@
-.footer                         { @apply w-full px-16 relative z-50 shadow-lg flex flex-col }
-@screen 360  {.footer           { @apply px-24 }}
-@screen 640  {.footer           { @apply px-32 }}
+.footer                         { @apply w-full pl-6 relative z-50 shadow-lg flex flex-col items-start pt-2 pb-3}
+@screen 768  {.footer           { @apply pl-4 } }
 
 .footer-links                   { @apply flex flex-col justify-evenly mb-0 h-16 items-center w-screen }
 @screen 768  {.footer-links     { @apply justify-between w-64 mb-4 max-w-xs h-12 }}
@@ -8,4 +7,6 @@
 .footer-link                    { @apply text-sm pt-2 pb-4 w-32 text-LightGray3 }
 .footer-link:hover              { @apply underline }
 
-.social-buttons                 { @apply flex flex-row items-center justify-between text-lg text-white w-32 h-16 }
+.social-buttons                 { @apply flex flex-row items-center justify-start text-lg text-white w-32 gap-8 }
+.social-button                  { @apply h-7 w-7 cursor-pointer }
+.social-button:hover            { @apply text-LightGray2 }

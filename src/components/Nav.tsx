@@ -31,13 +31,15 @@ interface linkArray {
   href: string,                     // Where the link points to
   name: string,                     // Text for this link
   page: showPage,                   // String to compare against to determine if this link is currently active (AKA this page is being displayed)
-  linkType: "internal" | "external" // internal = Gatsby Link, external = <a> tag
+  linkType: "internal" | "external", // internal = Gatsby Link, external = <a> tag
+  type: "" | "nav-link-mobile",
 };
 
 // Array of navigation elements for the nav bar
 const links:linkArray[] = [
-  {href:"/experience", linkType: "internal", page:"Experience", name:"Experience"}, 
-  {href:"/projects",   linkType: "internal", page:"Projects",   name:"Projects"}, 
+  {href:"/",           linkType: "internal", page:"Home", type:"nav-link-mobile", name:"Home"}, 
+  {href:"/experience", linkType: "internal", page:"Experience", type:"", name:"Experience"}, 
+  {href:"/projects",   linkType: "internal", page:"Projects", type:"",   name:"Projects"}, 
 ];
 
 interface props extends HTMLProps<any> {
@@ -72,16 +74,17 @@ export const Nav: React.FC<props> = (props) => {
                   <>{
                     // props.active is used to highlight the page that is currently being displayed
                     links.map(function(link, i) {
+                        console.log(link)
                         return <>
                           {link.linkType == "internal" 
                           ? <Link
-                              className={props.active == link.page ? 'nav-link nav-link-active' : 'nav-link nav-link-inactive'}
+                              className={link.type + (props.active == link.page ? ' nav-link nav-link-active' : ' nav-link nav-link-inactive')}
                               to={link.href}
                             >
                               {link.name}
                             </Link>
                           : <a
-                              className={props.active == link.page ?  'nav-link nav-link-active' : 'nav-link nav-link-inactive'}
+                              className={link.type + (props.active == link.page ?  ' nav-link nav-link-active' : ' nav-link nav-link-inactive')}
                               href={link.href}
                             >
                               {link.name}
