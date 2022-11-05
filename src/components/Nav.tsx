@@ -43,9 +43,10 @@ export const Nav: React.FC<props> = (props) => {
         <ul className={"page-link-wrapper " + (clicked ? "nav-opened" : "")}>
           <>
             {links.map(function(link, i) {
-              return <li key={i} className={link.type + (props.active == link.page ? ' nav-link nav-link-active' : ' nav-link nav-link-inactive')}>
+              return <li key={i} className="h-full">
                 <Link
                   to={link.href}
+                  className={link.type + (props.active == link.page ? ' nav-link nav-link-active' : ' nav-link nav-link-inactive')}
                 >
                   {link.name}
                 </Link>
