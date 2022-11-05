@@ -7,7 +7,7 @@ export const MainLogo: React.FC = () => {
     const info = "Catalano"; // THIS IS THE ALT TEXT FOR YOUR LOGO
     return (
         <GenericImage 
-            className="text-white"
+            className="mainLogo"
             src={LogoLong} // CHANGE THIS TO BE THE LOGO IMPORTED ABOVE
             title={info} 
             alt={info} 

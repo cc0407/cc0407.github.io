@@ -1,85 +1,100 @@
-import { Link } from "gatsby";
 import React, { HTMLProps, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import MainLogo from "./Img/MainLogo"
+import { MdClose } from "react-icons/md";
+import { RiMenuLine, RiMenuUnfoldLine, RiMenuFoldLine } from "react-icons/ri";
+import { RoundedLink } from "./RoundedLink";
+import MainLogo from "./Img/MainLogo";
+import { Link } from "gatsby";
 
 // Used to switch between mobile and desktop navigations
-// nav-desktop is only visible on lg viewports, mobile only visible on logical negation
-// clicked is used to display either hamburger or X icon
-const Bar = (props) => {
-  const [clicked,setClicked] = useState(false);  
-
+// nav-desktop is only visible on 800px+ viewports, mobile only visible on logical negation
+interface barProps extends HTMLProps<any> {
+  state: boolean;
+  setState: React.Dispatch<React.SetStateAction<boolean>>
+}
+const Bar:React.FC<barProps> = (props) => {
   return(
-    <div className='nav-hybrid-row'>
-      <div className='nav-desktop'>
+    <>
+      <div className="nav-links-desktop">
         {props.children}
-      </div> 
-
-      {
-      clicked 
-        ? <div className={`nav-mobile rounded-bl-4`}>
-            <FaTimes size={32} className={"h-20 mr-5"} onClick={()=> {setClicked(false)}}/>
-            <div className="w-full h-full pb-4">
-              {props.children}
-            </div>
-          </div>
-        : <FaBars size={32} className={"icon"} onClick={()=> {setClicked(true)}}/>
-      }
-    </div>
+      </div>
+      <div className={"nav-links-mobile" + (props.state ? " nav-opened" : "")} >
+          {props.children}
+      </div>
+    </>
   )
 }
 
+// List of pages, to compare against
+type showPage = "None" | "Home" | "Experience" | "Projects" | "Contact";
+
+interface linkArray {
+  href: string,                     // Where the link points to
+  name: string,                     // Text for this link
+  page: showPage,                   // String to compare against to determine if this link is currently active (AKA this page is being displayed)
+  linkType: "internal" | "external" // internal = Gatsby Link, external = <a> tag
+};
 
 // Array of navigation elements for the nav bar
-const links = [
-  /*
-    i.e: {href:"/contact-us", name:"Contact Us"},
-  */
-  // {href:"/contact", name:"Contact"},
-  {href:"/experience", name:"Work Experience"}, 
-  {href:"/projects", name:"Personal Projects"}, 
+const links:linkArray[] = [
+  {href:"/experience", linkType: "internal", page:"Experience", name:"Experience"}, 
+  {href:"/projects",   linkType: "internal", page:"Projects",   name:"Projects"}, 
 ];
 
 interface props extends HTMLProps<any> {
-  main?: boolean;
-  active?: 0|1|2|3|4|5;
+  active?: showPage;
 }
 const defaultProps: Partial<props> = { //Declared here, implemented at bottom of file
-  main: true,
-  active: 0,
+  active: "None",
   className: ""
 }
 
 export const Nav: React.FC<props> = (props) => {
+  const [clicked,setClicked] = useState(false);  
+
   return (
-    <div className={`nav-height nav bg-darkBlue ` + props.className }>
+    <>
+      <div className="nav-placeholder"/>
+      <div className={"nav " + props.className}>
 
-      <Link className="nav-logo" to="/">
-        <MainLogo/>
-      </Link>
+        {clicked // Swap icon and display overlay if mobile menu is open
+          ? <> 
+              <div className="nav-overlay" onClick={() => {setClicked(false)}}/>
+              <RiMenuFoldLine size={44} className={"icon"} onClick={()=> {setClicked(false)}}/>
+            </>
+          : <RiMenuLine size={44} className={"icon"} onClick={()=> {setClicked(true)}}/>
+        }
+        <Link to="/">
+          <MainLogo/>
+        </Link>
 
-      <Bar>      
-        <div className="nav-item items-center justify-around nav-link-list nav-link-size">
-          <div className="page-links">
-              {
-                // Creates a nav element for each item in the links array above.
-                // props.active is used to highlight the page that is currently being displayed
-                // (i+1) because (i == 0) is used for the home page (no links are active)
-                links.map(function(link, i) {
-                    return <Link
-                      className={`hover:text-white ` + (props.active == (i+1)? `font-bold text-white` : `text-LightGray2 `)}
-                      to={link.href}
-                      key={i}
-                    >
-                    {link.name}
-                  </Link>
-                })
-              }
-          </div>
-        </div>
-      </Bar>
-
-    </div>
+        <Bar state={clicked} setState={setClicked}>      
+            <div className="page-link-wrapper">
+                  <>{
+                    // props.active is used to highlight the page that is currently being displayed
+                    links.map(function(link, i) {
+                        return <>
+                          {link.linkType == "internal" 
+                          ? <Link
+                              className={props.active == link.page ? 'nav-link nav-link-active' : 'nav-link nav-link-inactive'}
+                              to={link.href}
+                            >
+                              {link.name}
+                            </Link>
+                          : <a
+                              className={props.active == link.page ?  'nav-link nav-link-active' : 'nav-link nav-link-inactive'}
+                              href={link.href}
+                            >
+                              {link.name}
+                            </a>}
+                        </>
+                    })
+                    
+                  }
+                </>
+            </div>
+        </Bar>
+      </div>
+    </>
   );
 };
 

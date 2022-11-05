@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import Head from "../components/Head";
+import Seo from "../components/SeoComponent";
 
 // This is a high-level view of what the page will be
 export const Contact = () => {
   return (
     <div className="min-h-screen column">
-      <Head
-        title="Contact" // Title of page for metadata, displayed on tab menu
-        description="Looking to get in touch with me?" // Description of page for metadata
-        url="https://christiancatalano.ca/contact" // This is the final url of the page, used for embed/meta data
-      />
       <Nav
-        active={1} // Active refers to the position on the nav bar, makes it bolded
+        active={"Contact"} // Active refers to the position on the nav bar, makes it bolded
       />
       <ContactBody />
       <Footer />
@@ -60,3 +55,12 @@ const ContactBody: React.FC<props> = () => {
 
 ContactBody.defaultProps = defaultProps;
 export default Contact;
+
+export const Head = () => (
+  <Seo
+    title="Contact"
+    url="/contact-us"
+  >
+    <meta name="robots" content="noindex"/>
+  </Seo>
+)   
