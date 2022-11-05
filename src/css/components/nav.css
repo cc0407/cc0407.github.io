@@ -1,9 +1,9 @@
-.nav                                { @apply w-full h-16 bg-black z-50 items-center flex flex-row justify-start text-white fixed }
+.nav                                { @apply w-full h-12 bg-black z-50 items-center flex flex-row justify-start text-white fixed }
 @screen 500  {.nav 				    { @apply static bg-black justify-between }}
 @screen 1921 {.nav                  { @apply justify-center }}
 
 /* keeps elements from going underneath fixed nav on mobile */
-.nav-placeholder				    { @apply w-full h-16 bg-black static block }
+.nav-placeholder				    { @apply w-full h-12 bg-black static block }
 @screen 500  {.nav-placeholder      { @apply hidden }}
 
 .mainLogo						    { @apply w-[160px] h-[27px] ml-4 mr-2 select-none object-contain}
@@ -12,14 +12,14 @@
 @screen 500  {.icon                 { @apply hidden }}
 
 /* the drop down after you click on the icon */
-.nav-overlay                        { @apply w-screen h-full fixed top-[64px] left-0 bg-darkBlue opacity-80 }
+.nav-overlay                        { @apply w-screen h-full fixed top-[48px] left-0 bg-darkBlue opacity-80 }
 @screen 500  {.nav-overlay          { @apply hidden}}
 
 .nav-links-desktop                  { @apply hidden }
 @screen 500  {.nav-links-desktop    { @apply w-full max-w-72 h-full flex flex-row static flex-grow-default bg-transparent items-center justify-end pb-0 }}
 @screen 1921 {.nav-links-desktop    { @apply justify-center }}
 
-.nav-links-mobile                   { @apply w-full h-auto bg-white flex flex-col mr-0 items-start justify-start fixed top-[64px] -translate-y-full ease-in-out duration-200 }
+.nav-links-mobile                   { @apply w-full h-auto bg-white flex flex-col mr-0 items-start justify-start fixed top-[48px] -translate-y-full ease-in-out duration-200 }
 @screen 500  {.nav-links-mobile     { @apply hidden }}
 
 .nav-opened                         { @apply translate-y-0 }
