@@ -1,7 +1,6 @@
 import React, { HTMLProps, useState } from "react";
-import { MdClose } from "react-icons/md";
 import { RiMenuLine, RiMenuUnfoldLine, RiMenuFoldLine } from "react-icons/ri";
-import { RoundedLink } from "./RoundedLink";
+import { BsArrowBarUp } from "react-icons/bs";
 import MainLogo from "./Img/MainLogo";
 import { Link } from "gatsby";
 
@@ -75,7 +74,7 @@ export const Nav: React.FC<props> = (props) => {
       
       <div className={"nav " + props.className}>
         {clicked // Swap icon and display overlay if mobile menu is open
-          ? <RiMenuFoldLine size={44} className={"icon"} onClick={()=> {setClicked(false)}}/>
+          ? <BsArrowBarUp size={44} className={"icon"} onClick={()=> {setClicked(false)}}/>
           : <RiMenuLine size={44} className={"icon"} onClick={()=> {setClicked(true)}}/>
         }
         <Link to="/">
