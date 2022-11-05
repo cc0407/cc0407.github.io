@@ -3,41 +3,7 @@ import { RiMenuLine, RiMenuUnfoldLine, RiMenuFoldLine } from "react-icons/ri";
 import { BsArrowBarUp } from "react-icons/bs";
 import MainLogo from "./Img/MainLogo";
 import { Link } from "gatsby";
-
-// Used to switch between mobile and desktop navigations
-// nav-desktop is only visible on 800px+ viewports, mobile only visible on logical negation
-interface barProps extends HTMLProps<any> {
-  active?: showPage
-}
-const Bar:React.FC<barProps> = (props) => {
-  return(
-    <div className="page-link-wrapper">
-                  <>{
-                    // props.active is used to highlight the page that is currently being displayed
-                    links.map(function(link, i) {
-                        console.log(link)
-                        return <>
-                          {link.linkType == "internal" 
-                          ? <Link
-                              className={link.type + (props.active == link.page ? ' nav-link nav-link-active' : ' nav-link nav-link-inactive')}
-                              to={link.href}
-                            >
-                              {link.name}
-                            </Link>
-                          : <a
-                              className={link.type + (props.active == link.page ?  ' nav-link nav-link-active' : ' nav-link nav-link-inactive')}
-                              href={link.href}
-                            >
-                              {link.name}
-                            </a>}
-                        </>
-                    })
-                    
-                  }
-                </>
-            </div>
-  )
-}
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // List of pages, to compare against
 type showPage = "None" | "Home" | "Experience" | "Projects" | "Contact";
@@ -46,15 +12,14 @@ interface linkArray {
   href: string,                     // Where the link points to
   name: string,                     // Text for this link
   page: showPage,                   // String to compare against to determine if this link is currently active (AKA this page is being displayed)
-  linkType: "internal" | "external", // internal = Gatsby Link, external = <a> tag
   type: "" | "nav-link-mobile",
 };
 
 // Array of navigation elements for the nav bar
 const links:linkArray[] = [
-  {href:"/",           linkType: "internal", page:"Home", type:"nav-link-mobile", name:"Home"}, 
-  {href:"/experience", linkType: "internal", page:"Experience", type:"", name:"Experience"}, 
-  {href:"/projects",   linkType: "internal", page:"Projects", type:"",   name:"Projects"}, 
+  {href:"/",           page:"Home",       type:"", name:"Home"}, 
+  {href:"/experience", page:"Experience", type:"", name:"Experience"}, 
+  {href:"/projects",   page:"Projects",   type:"", name:"Projects"}, 
 ];
 
 interface props extends HTMLProps<any> {
@@ -69,26 +34,35 @@ export const Nav: React.FC<props> = (props) => {
   const [clicked,setClicked] = useState(false);  
 
   return (
-    <>
-      <div className="nav-placeholder"/>
-      
-      <div className={"nav " + props.className}>
+    <>      
+      <nav className={"nav " + props.className}>
         {clicked // Swap icon and display overlay if mobile menu is open
-          ? <BsArrowBarUp size={44} className={"icon"} onClick={()=> {setClicked(false)}}/>
-          : <RiMenuLine size={44} className={"icon"} onClick={()=> {setClicked(true)}}/>
+          ? <BsArrowBarUp className={"icon"} onClick={()=> {setClicked(false)}}/>
+          : <RiMenuLine className={"icon"} onClick={()=> {setClicked(true)}}/>
         }
-        <Link to="/">
-          <MainLogo/>
-        </Link>
-        <div className="nav-links-desktop">   
-            <Bar active={props.active}/>
+        <ul className={"page-link-wrapper " + (clicked ? "nav-opened" : "")}>
+          <>
+            {links.map(function(link, i) {
+              return <li key={i} className={link.type + (props.active == link.page ? ' nav-link nav-link-active' : ' nav-link nav-link-inactive')}>
+                <Link
+                  to={link.href}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            })}
+          </>
+        </ul>
+        <div className="social-buttons">
+          <a href="https://github.com/cc0407" className="social-button" target="blank">
+            <FaGithub className="social-button text-black" title="Github" />
+          </a>
+          <a href="https://www.linkedin.com/in/christian-catalano/" className="social-button" target="blank">
+            <FaLinkedin className="social-button text-black" title="LinkedIn"/>
+          </a>
         </div>
-      </div>
-
-      {clicked && <div className="nav-overlay" onClick={() => {setClicked(false)}}/>}
-      <div className={"nav-links-mobile" + (clicked ? " nav-opened" : "")} >
-        <Bar active={props.active}/>
-      </div>
+      <div className={"nav-overlay " + (clicked? "visible" : "collapse")} onClick={() => {setClicked(false)}}/>
+      </nav>
     </>
   );
 };

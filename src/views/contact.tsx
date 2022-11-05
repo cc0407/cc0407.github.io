@@ -6,12 +6,11 @@ import Seo from "../components/SeoComponent";
 // This is a high-level view of what the page will be
 export const Contact = () => {
   return (
-    <div className="min-h-screen column">
+    <div className="min-h-screen column bg-offWhite">
       <Nav
         active={"Contact"} // Active refers to the position on the nav bar, makes it bolded
       />
       <ContactBody />
-      <Footer />
     </div>
   );
 };

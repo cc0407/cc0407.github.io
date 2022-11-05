@@ -6,7 +6,3 @@
 
 .footer-link                    { @apply text-sm pt-2 pb-4 w-32 text-LightGray3 }
 .footer-link:hover              { @apply underline }
-
-.social-buttons                 { @apply flex flex-row items-center justify-start text-lg text-white w-32 gap-8 }
-.social-button                  { @apply h-7 w-7 cursor-pointer }
-.social-button:hover            { @apply text-LightGray2 }

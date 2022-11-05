@@ -30,7 +30,7 @@ const defaultProps: Partial<props> = {};
 export const AllProjects: React.FC<props> = (props) => {
 
     return (
-        <div className="w-full column items-center bg-offWhite min-h-128 flex-grow-default">
+        <div className="w-full column items-center min-h-128 flex-grow-default">
             <div className="projectTitle">
                 {messaging[props.type]}
             </div>
