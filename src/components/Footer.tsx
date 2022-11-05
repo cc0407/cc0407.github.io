@@ -13,7 +13,7 @@ const defaultProps:Partial<props> = { //Declared here, implemented at bottom of 
 
 export const Footer:React.FC<props> = (props) => {
   return (
-    <div className={`footer ` + (props.homepage? `bg-black ` : `bg-darkBlue `) + `border-t-4 border-opacity-100 border-darkBlue2 column items-center justify-center ` + props.className}>
+    <div className={`footer column items-center justify-center ` + props.className}>
 
       <div className="social-buttons">
         <a href="https://github.com/cc0407" target="blank">

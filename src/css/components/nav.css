@@ -1,5 +1,5 @@
 .nav                                { @apply w-full h-16 bg-black z-50 items-center flex flex-row justify-start text-white fixed }
-@screen 500  {.nav 				    { @apply static bg-darkBlue justify-between }}
+@screen 500  {.nav 				    { @apply static bg-black justify-between }}
 @screen 1921 {.nav                  { @apply justify-center }}
 
 /* keeps elements from going underneath fixed nav on mobile */
