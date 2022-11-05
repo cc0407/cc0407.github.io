@@ -1,8 +1,8 @@
 .footer                         { @apply w-full pl-6 bg-black relative z-50 shadow-lg flex flex-col items-start py-2}
-@screen 768  {.footer           { @apply pl-4 } }
+@screen 640  {.footer           { @apply pl-4 } }
 
 .footer-links                   { @apply flex flex-col justify-evenly mb-0 h-16 items-center w-screen }
-@screen 768  {.footer-links     { @apply justify-between w-64 mb-4 max-w-xs h-12 }}
+@screen 640  {.footer-links     { @apply justify-between w-64 mb-4 max-w-xs h-12 }}
 
 .footer-link                    { @apply text-sm pt-2 pb-4 w-32 text-LightGray3 }
 .footer-link:hover              { @apply underline }
