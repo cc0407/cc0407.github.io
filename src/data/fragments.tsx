@@ -5,6 +5,7 @@ fragment content on project {
     projectType
     slug
     name
+    description
     link
     target
   }

@@ -4,6 +4,7 @@
         "projectType": "personal",
         "slug": "portfolio",
         "name": "Portfolio Website (this)",
+        "description": "",
         "link": "/", 
         "target":"_self"
     },
@@ -12,6 +13,7 @@
         "projectType": "personal",
         "slug": "russian-practice",
         "name": "Russian Alphabet Practice", 
+        "description": "",
         "link": "https://christiancatalano.ca/russian-alphabet-practice", 
         "target":"_self"
     },
@@ -20,6 +22,7 @@
         "projectType": "personal",
         "slug": "tic-tac-toe",
         "name": "Tic-Tac-Toe Clone", 
+        "description": "",
         "link": "https://christiancatalano.ca/tic-tac-toe", 
         "target":"_self"
     },
@@ -28,6 +31,7 @@
         "projectType": "personal",
         "slug": "stars-arcade",
         "name": "Stars Arcade", 
+        "description": "",
         "link": "https://github.com/cc0407/stars-arcade", 
         "target":"_blank"
     },
@@ -36,6 +40,7 @@
         "projectType": "personal",
         "slug": "game-of-life",
         "name": "Conway's Game of Life", 
+        "description": "",
         "link": "https://github.com/cc0407/stars-arcade", 
         "target":"_blank"
     },
@@ -43,7 +48,8 @@
         "type": "project",
         "projectType": "work",
         "slug": "viva",
-        "name": "VIVA Streaming TV", 
+        "name": "VIVA Streaming TV",
+        "description": "This website was designed and built from scratch using Gatsby, Typescript, and Tailwind.",
         "link": "https://landing.vivatv.ca", 
         "target":"_blank"
     },
@@ -51,7 +57,8 @@
         "type": "project",
         "projectType": "work",
         "slug": "tln-soccer",
-        "name": "TLN - Soccer Redesign", 
+        "name": "TLN - Soccer Redesign",
+        "description": "", 
         "link": "https://tln.ca/soccer", 
         "target":"_blank"
     }
