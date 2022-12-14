@@ -2,3 +2,5 @@
 
 .projectTitle               { @apply text-10 mt-4}
 @screen 400{.projectTitle   { @apply text-12 }}
+
+.projectDescription         { @apply text-5 }

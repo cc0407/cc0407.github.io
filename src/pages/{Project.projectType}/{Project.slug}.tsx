@@ -22,11 +22,11 @@ export const Project = ({data}) => {
           <Nav 
             active={project.projectType} // Active refers to the position on the nav bar, makes it bolded
           />
-            <div className="w-full column items-center pt-12 flex-grow-default relative">
-                <AutoLink to={"/" + project.projectType} className=" absolute">
-                    Return
-                </AutoLink>
-                <div className="m-4 p-4 bg-main rounded-2 text-white max-w-screen-1280 w-full min-h-128 grid grid-flow-col auto-cols-[repeat(auto-fill, minmax(100px, 1fr))]">
+            <div className="w-full column items-center pt-12 flex-grow-default">
+                <div className="m-4 p-4 bg-main rounded-2 text-white max-w-screen-1280 w-full min-h-128 grid auto-cols-fr grid-flow-row 640:grid-flow-col relative">
+                    <AutoLink to={"/" + project.projectType} className="m-4 absolute z-10">
+                        Return
+                    </AutoLink>
                     {/* Left Half */}
                     <div className="flex justify-center items-center min-w-80">
                         <GatsbyImage 
@@ -34,6 +34,7 @@ export const Project = ({data}) => {
                             image={getImage(data.file)}
                             alt={"test"}
                             formats={["webp"]}
+                            objectFit="cover"
                             quality={75}
                             outputPixelDensities={[0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]}
                             breakpoints={[190,210,260,290,360,400,440,500, 640, 800, 1024, 1280, 1440, 1920]}
@@ -41,11 +42,11 @@ export const Project = ({data}) => {
                     </div>
 
                     {/* Right Half */}
-                    <div className="min-w-80">
+                    <div className="min-w-80 flex flex-col gap-8 items-start p-4">
                         <div className="projectTitle">
                             {project.name}
                         </div>
-                        <div>
+                        <div className="projectDescription">
                             {project.description}
                         </div>
                         <AutoLink to={project.link} className="">
@@ -63,7 +64,7 @@ export const query = graphql`
     project(id: { eq: $id }) {
         ...content
     }
-    file(name: {eq: $slug}, extension: {eq: "png"}){
+    file(name: {eq: $slug}, extension: {regex: "/[(png)|(jpg)|(webp)]/"}){
         childImageSharp {
           gatsbyImageData
         }
