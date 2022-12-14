@@ -31,6 +31,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-transformer-json`,
+      options: { 
+        typeName: ({ object }) => object.type,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-purgecss`,
       options: { 
         tailwind: true,

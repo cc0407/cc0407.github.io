@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // List of pages, to compare against
-type showPage = "None" | "Home" | "Experience" | "Projects" | "Contact";
+type showPage = "None" | "Home" | "work" | "personal" | "Contact";
 
 interface linkArray {
   href: string,                     // Where the link points to
@@ -15,9 +15,9 @@ interface linkArray {
 
 // Array of navigation elements for the nav bar
 const links:linkArray[] = [
-  {href:"/",           page:"Home",       name:"Home"}, 
-  {href:"/experience", page:"Experience", name:"Experience"}, 
-  {href:"/projects",   page:"Projects",   name:"Projects"}, 
+  {href:"/",          page:"Home",      name:"Home"}, 
+  {href:"/work",      page:"work",      name:"Work Experience"}, 
+  {href:"/personal",  page:"personal",  name:"Personal Projects"}, 
 ];
 
 interface props extends HTMLProps<any> {

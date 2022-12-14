@@ -1,0 +1,58 @@
+[
+    {
+        "type": "project",
+        "projectType": "personal",
+        "name": "Portfolio Website (this)",
+        "slug": "portfolio",
+        "link": "/", 
+        "target":"_self"
+    },
+    {
+        "type": "project",
+        "projectType": "personal",
+        "name": "Russian Alphabet Practice", 
+        "slug": "russian-practice",
+        "link": "https://christiancatalano.ca/russian-alphabet-practice", 
+        "target":"_self"
+    },
+    {
+        "type": "project",
+        "projectType": "personal",
+        "name": "Tic-Tac-Toe Clone", 
+        "slug": "tic-tac-toe",
+        "link": "https://christiancatalano.ca/tic-tac-toe", 
+        "target":"_self"
+    },
+    {
+        "type": "project",
+        "projectType": "personal",
+        "name": "Stars Arcade", 
+        "slug": "stars-arcade",
+        "link": "https://github.com/cc0407/stars-arcade", 
+        "target":"_blank"
+    },
+    {
+        "type": "project",
+        "projectType": "personal",
+        "name": "Conway's Game of Life", 
+        "slug": "game-of-life",
+        "link": "https://github.com/cc0407/stars-arcade", 
+        "target":"_blank"
+    },
+    {
+        "type": "project",
+        "projectType": "work",
+        "name": "VIVA Streaming TV", 
+        "slug": "viva",
+        "link": "https://landing.vivatv.ca", 
+        "target":"_blank"
+    },
+    {
+        "type": "project",
+        "projectType": "work",
+        "name": "TLN - Soccer Redesign", 
+        "slug": "tln-soccer",
+        "link": "https://tln.ca/soccer", 
+        "target":"_blank"
+    }
+]
