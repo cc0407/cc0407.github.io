@@ -16,7 +16,7 @@
 .nav-link-active                    { @apply text-white bg-main }
 .nav-link                           { @apply flex justify-start items-center pl-3 py-2 w-full select-none my-1 font-bold rounded-2 } /* Common styles across all link types */
 @screen 640  {
-    .nav-link		                { @apply justify-center px-2 py-0 h-full w-28 my-0 text-center }
+    .nav-link		                { @apply justify-center px-2 py-0 h-full w-40 my-0 text-center }
     .nav-link-mobile                { @apply hidden }
 }
 

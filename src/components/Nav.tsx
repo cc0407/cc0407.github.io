@@ -3,6 +3,7 @@ import { RiMenuLine } from "react-icons/ri";
 import { BsArrowBarUp } from "react-icons/bs";
 import { Link } from "gatsby";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import AutoLink from "./AutoLink";
 
 // List of pages, to compare against
 type showPage = "None" | "Home" | "work" | "personal" | "Contact";
@@ -42,12 +43,12 @@ export const Nav: React.FC<props> = (props) => {
           <>
             {links.map(function(link, i) {
               return <li key={i} className="h-full">
-                <Link
+                <AutoLink
                   to={link.href}
                   className={"nav-link " + (props.active == link.page ? 'nav-link-active' : 'nav-item')}
                 >
                   {link.name}
-                </Link>
+                </AutoLink>
               </li>
             })}
           </>
