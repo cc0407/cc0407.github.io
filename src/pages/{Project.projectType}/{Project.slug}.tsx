@@ -23,18 +23,19 @@ export const Project = ({data}) => {
             active={project.projectType} // Active refers to the position on the nav bar, makes it bolded
           />
             <div className="w-full column items-center pt-12 flex-grow-default">
-                <div className="m-4 p-4 bg-main rounded-2 text-white max-w-screen-1280 w-full min-h-128 grid auto-cols-fr grid-flow-row 640:grid-flow-col relative">
+                <div className="m-4 p-4 bg-main rounded-2 text-white max-w-screen-1280 w-full min-h-128 grid auto-cols-fr grid-flow-row 1024:grid-flow-col relative">
                     <AutoLink to={"/" + project.projectType} className="m-4 absolute z-10">
                         Return
                     </AutoLink>
                     {/* Left Half */}
-                    <div className="flex justify-center items-center min-w-80">
+                    <div className="projectImageContainer">
                         <GatsbyImage 
                             /* @ts-ignore */
                             image={getImage(data.file)}
                             alt={"test"}
                             formats={["webp"]}
                             objectFit="cover"
+                            objectPosition={"50% 50%"}
                             quality={75}
                             outputPixelDensities={[0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]}
                             breakpoints={[190,210,260,290,360,400,440,500, 640, 800, 1024, 1280, 1440, 1920]}

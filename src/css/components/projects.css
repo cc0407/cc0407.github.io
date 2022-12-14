@@ -4,3 +4,5 @@
 @screen 400{.projectTitle   { @apply text-12 }}
 
 .projectDescription         { @apply text-5 }
+.projectImageContainer      { @apply flex justify-center items-center min-w-80 }
+.projectImageContainer div  { @apply h-full }
