@@ -14,7 +14,7 @@
         "slug": "russian-practice",
         "name": "Russian Alphabet Practice", 
         "description": "",
-        "link": "https://christiancatalano.ca/russian-alphabet-practice", 
+        "link": "/russian-alphabet-practice", 
         "target":"_self"
     },
     {
@@ -23,7 +23,7 @@
         "slug": "tic-tac-toe",
         "name": "Tic-Tac-Toe Clone", 
         "description": "",
-        "link": "https://christiancatalano.ca/tic-tac-toe", 
+        "link": "/tic-tac-toe", 
         "target":"_self"
     },
     {
