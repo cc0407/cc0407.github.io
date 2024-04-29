@@ -35,7 +35,11 @@ const router = createBrowserRouter([
             },
             {
                 path: ROUTES.experience,
-                element: <PAGES.Landing />,
+                element: <PAGES.Experience />,
+            },
+            {
+                path: ROUTES.projects,
+                element: <PAGES.Projects />,
             },
             { path: '*', element: <PAGES.NotFound /> },
         ],
