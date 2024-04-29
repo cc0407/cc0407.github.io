@@ -86,6 +86,13 @@ const Items: React.FC<IItems> = ({ dispatch, currentPath }) => {
                 className="mx-auto"
                 dispatch={dispatch}
             />
+            <NavItem
+                name="Contact"
+                active={currentPath}
+                link={ROUTES.contact}
+                className="mx-auto"
+                dispatch={dispatch}
+            />
         </>
     );
 };

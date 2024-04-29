@@ -1,13 +1,13 @@
 .contactContent {
-    @apply justify-center items-center flex-grow-[1] cursor-default z-10 text-base;
+    @apply justify-center items-center flex-grow-[1] cursor-default z-10 text-lg;
 }
 
 .contactTitle {
-    @apply text-xl font-bold text-darkBlue leading-none pt-8;
+    @apply text-7xl font-bold text-darkBlue leading-none pt-8;
 }
 
 .contactSubtitle {
-    @apply text-lg font-bold text-lightBlue leading-none pb-2;
+    @apply text-5xl font-bold text-lightBlue leading-none pb-2;
 }
 
 .contactTextLink {
