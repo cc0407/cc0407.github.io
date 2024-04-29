@@ -19,7 +19,7 @@ export const NavItem: React.FC<NI> = ({
         <div
             className={`${className || ''} ${
                 active === link ? 'text-white bg-main' : ''
-            } hover:underline decoration-main decoration-4 h-7 leading-7 hover:cursor-pointer text-base tracking-wide px-6 py-1 select-none rounded-lg w-min`}
+            } hover:underline decoration-main decoration-2 h-7 leading-7 hover:cursor-pointer text-base tracking-wide px-6 py-1 select-none rounded-lg w-min`}
             onClick={() => {
                 if (dispatch !== undefined) dispatch();
                 navigate(link);
