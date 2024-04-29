@@ -1,80 +1,89 @@
 import React, { useState } from 'react';
 import { NavItem } from '../components';
 import { ROUTES } from '../routes';
-//@ts-ignore
 import { MenuOutlined } from '@ant-design/icons';
-import { useNavigate } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
+import { useLocation } from 'react-router-dom';
+import { BsArrowBarUp } from 'react-icons/bs';
 
 export const Nav = () => {
-    const navigate = useNavigate();
     const [open, setOpen] = useState<boolean>(false);
+    const location = useLocation();
+
     return (
-        <div className="w-full h-12 backdrop-blur bg-transparent z-50 flex items-center justify-between relative font-aileron flex-shrink-0 text-black py-2 border-b-black border-solid border-0 border-b-2">
-            {/* Desktop View */}
-            <div className="hidden gap-12 ml-6 md:flex font-semibold text-lg">
-                <Items />
+        <div className="w-full h-8 backdrop-blur bg-transparent z-50 flex items-center justify-between relative font-aileron flex-shrink-0 text-black py-2 border-b-black border-solid border-0 md:border-b-2">
+            {/* Links (automatically slides up to top on mobile) */}
+            <div
+                className={`page-link-wrapper md:ml-6 md-max:gap-6 ${
+                    open ? 'nav-opened' : ''
+                }`}
+            >
+                <Items currentPath={location.pathname} />
             </div>
 
             {/* Mobile View */}
-            <MenuOutlined
-                className="md:hidden ml-4 text-[150%] cursor-pointer"
-                onClick={() => setOpen(!open)}
-            />
-            {open && (
-                <>
-                    <div
-                        className="absolute top-20 left-0 h-[calc(100vh-80px)] w-full bg-black/75"
-                        onClick={() => setOpen(false)}
-                    />
-                    <div className="absolute bg-olive right-0 top-20 py-10 w-full flex flex-col gap-8 items-end shadow-md z-10 md-max:text-cream rounded">
-                        <Items
-                            dispatch={() => {
-                                setOpen(false);
-                            }}
-                        />
-                    </div>
-                </>
+            {/* Hamburger icon */}
+            {open ? (
+                <BsArrowBarUp
+                    className={'icon nav-item md:hidden ml-6 text-[150%]'}
+                    onClick={() => {
+                        setOpen(false);
+                    }}
+                />
+            ) : (
+                <MenuOutlined
+                    className={'icon nav-item md:hidden ml-6 text-[150%]'}
+                    onClick={() => {
+                        setOpen(true);
+                    }}
+                />
             )}
 
-            <div className="social-buttons mr-4">
-                <a
-                    href="https://github.com/cc0407"
-                    className="icon nav-item"
-                    target="blank"
-                >
-                    <FaGithub className="icon" title="Github" />
-                </a>
-            </div>
+            {/* 
+            <div
+                className={`nav-overlay ${open ? 'visible' : 'collapse'}`}
+                onClick={() => {
+                    setOpen(false);
+                }}
+            /> */}
+
+            <a
+                href="https://github.com/cc0407"
+                className="icon nav-item h-8 mr-4"
+                target="blank"
+            >
+                <FaGithub className="icon" title="Github" />
+            </a>
         </div>
     );
 };
 
 interface IItems extends React.HTMLAttributes<HTMLDivElement> {
     dispatch?: () => void;
+    currentPath: string;
 }
-const Items: React.FC<IItems> = ({ dispatch }) => {
+const Items: React.FC<IItems> = ({ dispatch, currentPath }) => {
     return (
         <>
             <NavItem
                 name="Home"
-                active={false}
+                active={currentPath}
                 link={ROUTES.root}
-                className=" mx-auto"
+                className="mx-auto"
                 dispatch={dispatch}
             />
             <NavItem
                 name="Experience"
-                active={false}
+                active={currentPath}
                 link={ROUTES.experience}
-                className="col-span-2 mx-auto"
+                className="mx-auto"
                 dispatch={dispatch}
             />
             <NavItem
                 name="Projects"
-                active={false}
+                active={currentPath}
                 link={ROUTES.projects}
-                className="col-span-2 mx-auto"
+                className="mx-auto"
                 dispatch={dispatch}
             />
         </>

@@ -42,8 +42,8 @@ module.exports = {
                 inherit: 'inherit',
             },
             fontFamily: {
-                aileron: ['Aileron', 'sans-serif'],
-                catamaran: ['Catamaran', 'sans-serif'],
+                aileron: ['aileron', 'sans-serif'],
+                catamaran: ['catamaran', 'sans-serif'],
             },
             screens: {
                 '3xl': '1921px',

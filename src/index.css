@@ -27,7 +27,6 @@ body {
 
 @layer components {
     @import './css/footer.css';
-    @import './css/index.css';
     @import './css/main.css';
     @import './css/nav.css';
     @import './css/util.css';

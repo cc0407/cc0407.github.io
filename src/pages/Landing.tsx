@@ -21,7 +21,7 @@ export const Landing = () => {
             <div className="flex flex-row justify-center items-center flex-wrap max-w-screen-lg">
                 <div className="py-4 md:px-10 object-cover">
                     <img
-                        className="circle-image"
+                        className="w-48 h-48 xs:w-64 xs:h-64 rounded-full bg-black"
                         src={'https://avatars.githubusercontent.com/u/46330616'}
                     />
                 </div>
