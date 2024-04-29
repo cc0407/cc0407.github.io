@@ -1,0 +1,38 @@
+/* @font-face {
+    font-family: 'Grenoble';
+    src: url('./fonts/GrenobleSerial.otf') format('opentype');
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .checker {
+        background: repeating-conic-gradient(
+                rgb(131 141 83 / var(--tw-bg-opacity)) 0% 25%,
+                transparent 0% 50%
+            )
+            50% / 32px 32px;
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
+    }
+}
+
+body {
+    margin: 0;
+}
+
+@layer components {
+    @import './css/footer.css';
+    @import './css/index.css';
+    @import './css/main.css';
+    @import './css/nav.css';
+    @import './css/util.css';
+    /*--- More CSS files go here ---*/
+    @import './css/contact.css';
+    @import './css/projects.css';
+    /*---   End more CSS files   ---*/
+}

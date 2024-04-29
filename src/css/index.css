@@ -1,0 +1,15 @@
+.homeTextLink {
+    @apply underline whitespace-nowrap;
+}
+.homeTextLink:hover {
+    @apply text-white bg-lightBlue rounded-sm no-underline;
+}
+
+.circle-image {
+    @apply w-48 h-48 rounded-full bg-black;
+}
+@screen xs {
+    .circle-image {
+        @apply w-64 h-64;
+    }
+}

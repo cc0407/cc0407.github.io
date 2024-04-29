@@ -1,0 +1,89 @@
+html {
+    @apply font-catamaran overflow-x-hidden;
+}
+@screen lg {
+    html {
+        @apply overflow-y-scroll;
+    }
+}
+
+a {
+    @apply text-center;
+}
+
+.title {
+    @apply text-2xl;
+}
+@screen xs {
+    .title {
+        @apply text-2xl;
+    }
+}
+@screen sm {
+    .title {
+        @apply text-4xl;
+    }
+}
+@screen lg {
+    .title {
+        @apply text-xl;
+    }
+}
+
+.subtitle {
+    @apply font-light text-lg pb-8;
+}
+@screen xs {
+    .subtitle {
+        @apply text-lg;
+    }
+}
+@screen sm {
+    .subtitle {
+        @apply text-xl;
+    }
+}
+@screen md {
+    .subtitle {
+        @apply text-3xl;
+    }
+}
+@screen 2xl {
+    .subtitle {
+        @apply text-4xl;
+    }
+}
+
+.page-width {
+    @apply px-0 max-w-full;
+}
+@screen xs {
+    .page-width {
+        @apply px-2;
+    }
+}
+@screen xs {
+    .page-width {
+        @apply px-4;
+    }
+}
+@screen sm {
+    .page-width {
+        @apply px-8;
+    }
+}
+@screen lg {
+    .page-width {
+        @apply px-16;
+    }
+}
+@screen xl {
+    .page-width {
+        @apply px-24;
+    }
+}
+@screen 2xl {
+    .page-width {
+        @apply px-48;
+    }
+}

@@ -1,0 +1,22 @@
+.projectListItem {
+    @apply w-72 h-12 my-4 rounded-md flex justify-center items-center bg-main text-white underline select-none;
+}
+
+.projectTitle {
+    @apply text-xl mt-4;
+}
+@screen xs {
+    .projectTitle {
+        @apply text-2xl;
+    }
+}
+
+.projectDescription {
+    @apply text-lg;
+}
+.projectImageContainer {
+    @apply flex justify-center items-center min-w-80;
+}
+.projectImageContainer div {
+    @apply h-full;
+}

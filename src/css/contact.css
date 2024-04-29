@@ -1,0 +1,18 @@
+.contactContent {
+    @apply justify-center items-center flex-grow-[1] cursor-default z-10 text-base;
+}
+
+.contactTitle {
+    @apply text-xl font-bold text-darkBlue leading-none pt-8;
+}
+
+.contactSubtitle {
+    @apply text-lg font-bold text-lightBlue leading-none pb-2;
+}
+
+.contactTextLink {
+    @apply underline whitespace-nowrap px-1 cursor-pointer;
+}
+.contactTextLink:hover {
+    @apply text-white bg-darkBlue rounded-sm underline;
+}

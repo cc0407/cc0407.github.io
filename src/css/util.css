@@ -1,0 +1,45 @@
+/* purgecss start ignore */
+/* ROUNDEDLINK */
+.roundLinkSmall {
+    @apply rounded-md py-2 px-4;
+}
+
+.roundLink {
+    @apply rounded-md py-2 px-2;
+}
+@screen xs {
+    .roundLink {
+        @apply px-4;
+    }
+}
+@screen xl {
+    .roundLink {
+        @apply px-6;
+    }
+}
+
+.roundLinkLarge {
+    @apply rounded-md py-2 px-4;
+}
+@screen sm {
+    .roundLinkLarge {
+        @apply px-6;
+    }
+}
+/* purgecss end ignore */
+
+.column {
+    @apply flex flex-col;
+}
+.row {
+    @apply flex flex-row;
+}
+.dark {
+    @apply bg-darkBlue text-white;
+}
+.centered {
+    @apply items-center justify-center;
+}
+.smallImg {
+    @apply max-w-xs w-3/4;
+}
