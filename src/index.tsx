@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { RouterProvider, Outlet, createBrowserRouter } from 'react-router-dom';
 import * as PAGES from './pages';
 import { ROUTES } from './routes';
-import { Footer, Nav } from './sections';
-import { Helmet } from 'react-helmet';
+import { Nav } from './sections';
 import './index.css';
 import './';
 

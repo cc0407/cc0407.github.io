@@ -7,7 +7,7 @@ export const Landing = () => {
     const [lang, setLang] = useState(0);
     function changeLanguage(e: any) {
         var langSelect = lang;
-        while (langSelect == lang)
+        while (langSelect === lang)
             langSelect = Math.floor(Math.random() * languageList.length);
         setLang(langSelect);
     }
@@ -22,6 +22,7 @@ export const Landing = () => {
                 <div className="py-4 md:px-10 object-cover">
                     <img
                         className="w-48 h-48 xs:w-64 xs:h-64 rounded-full bg-black"
+                        alt={'Avatar'}
                         src={'https://avatars.githubusercontent.com/u/46330616'}
                     />
                 </div>

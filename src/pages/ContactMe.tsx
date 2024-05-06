@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Seo from '../components/SeoComponent';
 
 // This is a high-level view of what the page will be

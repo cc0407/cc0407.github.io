@@ -1,24 +1,26 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren } from 'react';
 // @ts-ignore
-import logo from "../img/logos/LogoLong.png";
+import logo from '../img/logos/LogoLong.png';
 
 interface props extends PropsWithChildren<any> {
-    title: string,
-    description?: string,
-    url: string,
-    image?: string,
-    metaTitle?: string,
+    title: string;
+    description?: string;
+    url: string;
+    image?: string;
+    metaTitle?: string;
     htmlAttributes?: any;
 }
 
-const defaultProps:Partial<props> = { //Declared here, implemented at bottom of file
+const defaultProps: Partial<props> = {
+    //Declared here, implemented at bottom of file
     image: logo, // defaults to main logo if nothing provided
-    description: "",
-    htmlAttributes: {'lang': 'en'},
-}
+    description: '',
+    htmlAttributes: { lang: 'en' },
+};
 
-export const Seo:React.FC<props> = (props) => {    
-    let metaTitle = (props.metaTitle == undefined ? props.title : props.metaTitle)
+export const Seo: React.FC<props> = props => {
+    let metaTitle =
+        props.metaTitle === undefined ? props.title : props.metaTitle;
     return (
         <>
             <meta charSet="utf-8" />
@@ -33,7 +35,7 @@ export const Seo:React.FC<props> = (props) => {
             {props.children}
         </>
     );
-}
+};
 
 Seo.defaultProps = defaultProps;
 export default Seo;
