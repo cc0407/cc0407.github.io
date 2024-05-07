@@ -12,7 +12,7 @@ export const Nav = () => {
     const location = useLocation();
 
     return (
-        <div className="w-full h-8 backdrop-blur bg-transparent z-50 flex items-center justify-between relative font-aileron flex-shrink-0 text-black py-2 border-b-black border-solid border-0 md:border-b-2">
+        <div className="w-full h-8 backdrop-blur bg-transparent z-50 flex items-center justify-between relative flex-shrink-0 text-black py-2 border-b-black border-solid border-0 md:border-b-2">
             {/* Links (automatically slides up to top on mobile) */}
             <div
                 className={`page-link-wrapper md:ml-6 md-max:gap-6 ${
