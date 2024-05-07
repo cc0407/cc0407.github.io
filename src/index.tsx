@@ -7,16 +7,24 @@ import { Nav } from './sections';
 import './index.css';
 import './';
 
+const bgImg = require('./img/bg/landing.webp');
+
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 
 const Layout = () => {
     return (
-        <div className="bg-offWhite w-screen h-screen overflow-y-auto overflow-x-hidden flex flex-col font-grenoble">
-            <Nav />
-            <Outlet />
-        </div>
+        <>
+            <img
+                src={bgImg}
+                className="absolute z-1 object-cover h-screen w-screen left-0 opacity-25"
+            />
+            <div className=" w-screen h-screen overflow-y-auto overflow-x-hidden flex flex-col font-grenoble relative z-10">
+                <Nav />
+                <Outlet />
+            </div>
+        </>
     );
 };
 

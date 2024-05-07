@@ -13,7 +13,7 @@
 }
 
 .nav-opened {
-    @apply duration-200 !visible !translate-y-0;
+    @apply duration-200 !visible !-translate-y-12;
 }
 @screen md {
     .nav-opened {
@@ -29,10 +29,24 @@
 }
 
 .page-link-wrapper {
-    @apply z-[49] w-full h-auto pb-4 flex flex-col text-darkBlue text-xl bg-white fixed top-0 left-0 pt-12 -translate-y-full ease-in-out duration-200;
+    @apply z-[49] w-full h-auto pb-12 flex flex-col text-darkBlue text-xl fixed top-12 left-0 pt-12 -translate-y-full ease-in-out duration-200;
 }
 @screen md {
     .page-link-wrapper {
         @apply gap-5 w-auto h-full visible flex-row justify-end items-center p-0 my-0 text-lg bg-transparent static translate-y-0;
     }
+}
+
+@supports (backdrop-filter: var(--tw)) {
+    .blurFallback {
+        @apply backdrop-blur-lg bg-transparent;
+    }
+}
+@screen md {
+    .blurFallback {
+        @apply hidden;
+    }
+}
+.blurFallback {
+    @apply bg-white/80 absolute left-0 top-0 h-full w-full;
 }

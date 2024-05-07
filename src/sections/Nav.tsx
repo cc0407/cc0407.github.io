@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { NavItem } from '../components';
 import { ROUTES } from '../routes';
-import { MenuOutlined } from '@ant-design/icons';
 import { FaGithub } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
 import { BsArrowBarUp } from 'react-icons/bs';
+import { IconContext } from 'react-icons';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 export const Nav = () => {
     const [open, setOpen] = useState<boolean>(false);
@@ -18,26 +19,32 @@ export const Nav = () => {
                     open ? 'nav-opened' : ''
                 }`}
             >
+                <div className="blurFallback" />
                 <Items currentPath={location.pathname} />
             </div>
 
             {/* Mobile View */}
             {/* Hamburger icon */}
-            {open ? (
-                <BsArrowBarUp
-                    className={'icon nav-item md:hidden ml-6 text-[150%]'}
-                    onClick={() => {
-                        setOpen(false);
-                    }}
-                />
-            ) : (
-                <MenuOutlined
-                    className={'icon nav-item md:hidden ml-6 text-[150%]'}
-                    onClick={() => {
-                        setOpen(true);
-                    }}
-                />
-            )}
+            <IconContext.Provider
+                value={{
+                    className: 'icon nav-item md:hidden ml-4',
+                    size: '100px',
+                }}
+            >
+                {open ? (
+                    <BsArrowBarUp
+                        onClick={() => {
+                            setOpen(false);
+                        }}
+                    />
+                ) : (
+                    <GiHamburgerMenu
+                        onClick={() => {
+                            setOpen(true);
+                        }}
+                    />
+                )}
+            </IconContext.Provider>
 
             {/* 
             <div
@@ -69,28 +76,28 @@ const Items: React.FC<IItems> = ({ dispatch, currentPath }) => {
                 name="Home"
                 active={currentPath}
                 link={ROUTES.root}
-                className="mx-auto"
+                className="mx-auto z-20"
                 dispatch={dispatch}
             />
             <NavItem
                 name="Experience"
                 active={currentPath}
                 link={ROUTES.experience}
-                className="mx-auto"
+                className="mx-auto z-20"
                 dispatch={dispatch}
             />
             <NavItem
                 name="Projects"
                 active={currentPath}
                 link={ROUTES.projects}
-                className="mx-auto"
+                className="mx-auto z-20"
                 dispatch={dispatch}
             />
             <NavItem
                 name="Contact"
                 active={currentPath}
                 link={ROUTES.contact}
-                className="mx-auto"
+                className="mx-auto z-20"
                 dispatch={dispatch}
             />
         </>
