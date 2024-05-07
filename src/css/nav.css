@@ -29,11 +29,11 @@
 }
 
 .page-link-wrapper {
-    @apply z-[49] w-full h-auto pb-12 flex flex-col text-darkBlue text-xl fixed top-12 left-0 pt-12 -translate-y-full ease-in-out duration-200;
+    @apply z-[49] w-full h-auto pb-12 flex flex-col text-darkBlue text-xl fixed top-12 left-0 pt-12 -translate-y-full ease-in-out duration-200 border-b-black border-solid border-0 border-b-2;
 }
 @screen md {
     .page-link-wrapper {
-        @apply gap-5 w-auto h-full visible flex-row justify-end items-center p-0 my-0 text-lg bg-transparent static translate-y-0;
+        @apply gap-5 w-auto h-full visible flex-row justify-end items-center p-0 my-0 text-lg bg-transparent static translate-y-0 border-b-0;
     }
 }
 

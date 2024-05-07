@@ -2,6 +2,8 @@
     font-family: 'Grenoble';
     src: url('./fonts/GrenobleSerial.otf') format('opentype');
 } */
+@import '@fontsource/aileron';
+@import '@fontsource/catamaran';
 
 @tailwind base;
 @tailwind components;

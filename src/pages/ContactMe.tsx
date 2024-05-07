@@ -5,8 +5,8 @@ export const Contact = () => {
     return (
         <>
             {' '}
-            <div className="column centered contactContent ">
-                <div className="contactSubtitle">Business Inquiries</div>
+            <div className="column centered contactContent  text-center ">
+                <div className="contactSubtitle pb-4">Business Inquiries</div>
                 <div>
                     Please send an email to:{' '}
                     <a

@@ -35,7 +35,7 @@ export const Landing = () => {
                     >
                         {languageList[lang].text}!
                     </div>
-                    <div className="text-2xl leading-tight py-3 sm-max:text-center">
+                    <div className="sm-max:text-3xl text-4xl leading-tight py-3 sm-max:text-center">
                         I'm{' '}
                         <span className="font-bold">Christian Catalano</span>.
                     </div>

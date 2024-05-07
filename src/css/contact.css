@@ -7,12 +7,12 @@
 }
 
 .contactSubtitle {
-    @apply text-5xl font-bold text-lightBlue leading-none pb-2;
+    @apply text-5xl font-bold text-darkBlue leading-none pb-2;
 }
 
 .contactTextLink {
     @apply underline whitespace-nowrap px-1 cursor-pointer;
 }
 .contactTextLink:hover {
-    @apply text-white bg-darkBlue rounded-sm underline;
+    @apply decoration-wavy;
 }
