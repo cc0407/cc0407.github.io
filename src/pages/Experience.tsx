@@ -1,5 +1,6 @@
-import React from 'react';
+import { experience } from '../data/experience';
+import { ProjectSlider } from '../sections/projects';
 
 export const Experience = () => {
-    return <></>;
+    return <ProjectSlider datasrc={experience} />;
 };

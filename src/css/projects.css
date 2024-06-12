@@ -6,13 +6,16 @@
     @apply flex-grow;
 }
 
-.featured-list > .slick-list,
+.featured-list > .slick-list {
+    @apply h-[calc(100vh-10rem)];
+}
+
 .featured-list > .slick-list > .slick-track {
     @apply h-full;
 }
 
 .featured-list .slick-slide > div {
-    @apply h-full lg-max:py-8 lg-max:px-12 p-16 box-border;
+    @apply h-full lg-max:p-8 p-16 box-border;
 }
 
 .slick-arrow::before {
