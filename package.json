@@ -6,6 +6,8 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
+    "@fontsource-variable/bitter": "^5.0.19",
+    "@fontsource-variable/catamaran": "^5.0.20",
     "@fontsource/aileron": "^4.5.3",
     "@fontsource/catamaran": "^4.5.9",
     "@fontsource/didact-gothic": "^4.5.0",

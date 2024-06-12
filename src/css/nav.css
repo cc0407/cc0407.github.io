@@ -29,7 +29,7 @@
 }
 
 .page-link-wrapper {
-    @apply z-[49] w-full h-auto pb-12 flex flex-col text-darkBlue text-xl fixed top-12 left-0 pt-12 -translate-y-full ease-in-out duration-200 border-b-black border-solid border-0 border-b-2;
+    @apply z-[49] w-full h-auto pb-12 flex flex-col text-darkBlue3 text-xl fixed top-12 left-0 pt-12 -translate-y-full ease-in-out duration-200 border-b-black border-solid border-0 border-b-2;
 }
 @screen md {
     .page-link-wrapper {

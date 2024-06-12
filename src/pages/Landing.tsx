@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Seo from '../components/SeoComponent';
+import { Link } from 'react-router-dom';
+import { ROUTES } from '../routes';
 
 // This is a high-level view of what the page will be
 export const Landing = () => {
@@ -27,32 +29,25 @@ export const Landing = () => {
                     />
                 </div>
 
-                <div className="max-w-screen-sm">
+                <div className="max-w-screen-sm font-bitter text-darkBlue3">
                     <div
-                        className="text-6xl font-bold text-lightBlue leading-none sm-max:text-center"
+                        className="text-7xl sm-max:text-center leading-[1.1] pb-5"
                         onMouseEnter={changeLanguage}
                         onMouseLeave={resetLang}
                     >
-                        {languageList[lang].text}!
+                        Hi, my name <br />
+                        is <span className="font-bold">Christian</span>
+                        <span className="text-darkBlue3">.</span>
                     </div>
-                    <div className="sm-max:text-3xl text-4xl leading-tight py-3 sm-max:text-center">
-                        I'm{' '}
-                        <span className="font-bold">Christian Catalano</span>.
-                    </div>
-                    <div className="xs-max:text-base text-lg">
-                        I am currently studying B.Comp Honours{' '}
-                        <span className="font-bold">Software Engineering</span>,
-                        minoring in{' '}
-                        <span className="font-bold">Mathematics</span>, at the
-                        University of Guelph. With{' '}
-                        <span className="font-bold">
-                            5+ years of full-time experience
-                        </span>{' '}
-                        in the industry, and{' '}
-                        <span className="font-bold">
-                            3 years in full-stack development
-                        </span>{' '}
-                        specifically, I would be a great asset to your team!
+                    <div className="xs-max:text-base text-2xl leading-normal">
+                        I am a{' '}
+                        <span className="font-bold">full-stack developer</span>{' '}
+                        from Toronto, Ontario,
+                        <br /> with over{' '}
+                        <Link to={ROUTES.experience} className="text-darkBlue3">
+                            5 years of full-time work experience
+                        </Link>
+                        .
                     </div>
                 </div>
             </div>
@@ -61,7 +56,7 @@ export const Landing = () => {
 };
 
 const languageList = [
-    { lang: 'English', text: 'Hello' },
+    { lang: 'English', text: 'Hi' },
     { lang: 'Italian', text: 'Ciao' },
     { lang: 'Russian', text: 'привет' },
     { lang: 'French', text: 'Bonjour' },

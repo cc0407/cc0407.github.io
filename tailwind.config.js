@@ -25,6 +25,7 @@ module.exports = {
                 offWhite: '#F2F2F2',
                 darkBlue: '#05111C',
                 darkBlue2: '#02141f',
+                darkBlue3: '#04243D',
                 lightBlue: '#3f6d93',
 
                 background: '#E2E8F0',
@@ -43,7 +44,8 @@ module.exports = {
             },
             fontFamily: {
                 aileron: ['aileron', 'sans-serif'],
-                catamaran: ['catamaran', 'sans-serif'],
+                catamaran: ['Catamaran Variable', 'sans-serif'],
+                bitter: ['Bitter Variable', 'serif'],
             },
             screens: {
                 '3xl': '1921px',

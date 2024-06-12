@@ -3,7 +3,8 @@
     src: url('./fonts/GrenobleSerial.otf') format('opentype');
 } */
 @import '@fontsource/aileron';
-@import '@fontsource/catamaran';
+@import '@fontsource-variable/catamaran';
+@import '@fontsource-variable/bitter';
 
 @tailwind base;
 @tailwind components;

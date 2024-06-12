@@ -18,9 +18,9 @@ const Layout = () => {
         <>
             <img
                 src={bgImg}
-                className="absolute z-1 object-cover h-screen w-screen left-0 opacity-25"
+                className="absolute z-1 object-cover h-screen w-screen left-0 top-0 opacity-25"
             />
-            <div className=" w-screen h-screen overflow-y-auto overflow-x-hidden flex flex-col font-grenoble relative z-10">
+            <div className="md-max:w-[calc(100vw-1rem)] md-max:h-[calc(100vh-1rem)] md-max:m-2 w-[calc(100vw-2rem)] h-[calc(100vh-2rem)] m-4 overflow-y-auto overflow-x-hidden flex flex-col font-grenoble relative z-10 bg-white/90">
                 <Nav />
                 <Outlet />
             </div>
