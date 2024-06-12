@@ -14,7 +14,7 @@ export const experience: project[] = [
         projectType: 'work',
         name: 'TLN',
         description:
-            'Designed and built site using custom Wordpress theme and PHP',
+            'Designed and built site using custom Wordpress theme and PHP.',
         link: 'https://www.tln.ca/',
         image: require('../img/projects/tln.png'),
         target: '_blank',
@@ -31,8 +31,19 @@ export const experience: project[] = [
     {
         projectType: 'work',
         name: 'DisplayPro',
-        description: '',
+        description:
+            'Assisted in styling and front-end functionality, on a freelance basis.',
         link: 'https://displaypro.shop/',
+        image: require('../img/projects/displaypro.webp'),
+        target: '_blank',
+    },
+    {
+        projectType: 'work',
+        name: 'Boosted Bouillon',
+        description:
+            'Designed and built from scratch using React, Typescript, and Tailwind.',
+        link: 'https://boostedbouillon.com/',
+        image: require('../img/projects/boosted.png'),
         target: '_blank',
     },
 ];

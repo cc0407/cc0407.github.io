@@ -19,24 +19,26 @@ export const projects: project[] = [
     },
     {
         projectType: 'personal',
-        name: 'Tic-Tac-Toe Clone',
-        description: '',
-        link: '/tic-tac-toe',
-        image: require('../img/projects/tic-tac-toe.PNG'),
-        target: '_self',
-    },
-    {
-        projectType: 'personal',
         name: 'Stars Arcade',
-        description: '',
+        description:
+            'A horizontal scroller game, inspired by Asteroids (1979), built in Java using AWT. Survive as long as you can as asteroids of varying size and speed fly toward you. Use special abilities such as a shield, faster boosters, triple shot, proximity mines, and a giant beam laser! ',
         link: 'https://github.com/cc0407/stars-arcade',
         image: require('../img/projects/stars-arcade.PNG'),
         target: '_blank',
     },
     {
         projectType: 'personal',
+        name: 'Tic-Tac-Toe',
+        description: 'A standard tic-tac-toe clone built in React.',
+        link: '/tic-tac-toe',
+        image: require('../img/projects/tic-tac-toe.PNG'),
+        target: '_self',
+    },
+    {
+        projectType: 'personal',
         name: "Conway's Game of Life",
-        description: '',
+        description:
+            "Showcasing Conway's Game of Life in java! Edit a grid of cells and watch as they evolve and grow. Allows for varying simulation speeds.",
         link: 'https://github.com/cc0407/Conways-Game-of-Life',
         image: require('../img/projects/game-of-life.PNG'),
         target: '_blank',
