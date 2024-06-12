@@ -4,14 +4,15 @@ export const projects: project[] = [
     {
         projectType: 'personal',
         name: 'Portfolio Website',
-        description: 'This website, build using React and Typescript.',
-        link: '/',
+        description: 'This website, built using React and Typescript.',
+        image: require('../img/projects/portfolio.png'),
         target: '_self',
     },
     {
         projectType: 'personal',
         name: 'Russian Alphabet Practice',
-        description: '',
+        description:
+            'Alphabet pronunciation helper. This app contains a dictionary of all russian letters and their pronunciations. You can either press a letter to hear its pronunciation, or test your knowledge with a mini-game where you match a letter to its corresponding sound.',
         link: '/russian-alphabet-practice',
         image: require('../img/projects/russian-practice.PNG'),
         target: '_self',
