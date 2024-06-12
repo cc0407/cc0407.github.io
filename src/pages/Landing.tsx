@@ -23,7 +23,7 @@ export const Landing = () => {
             <div className="flex flex-row justify-center items-center flex-wrap max-w-screen-lg">
                 <div className="py-4 md:px-10 object-cover">
                     <img
-                        className="w-48 h-48 xs:w-64 xs:h-64 rounded-full bg-black"
+                        className="w-48 h-48 xs:w-64 xs:h-64 rounded-full bg-black border-solid border-[6px] border-darkBlue"
                         alt={'Avatar'}
                         src={'https://avatars.githubusercontent.com/u/46330616'}
                     />
@@ -31,19 +31,19 @@ export const Landing = () => {
 
                 <div className="max-w-screen-sm font-bitter text-darkBlue3">
                     <div
-                        className="text-7xl sm-max:text-center leading-[1.1] pb-5"
+                        className="sm-max:text-5xl text-7xl sm-max:text-center leading-[1.1]"
                         onMouseEnter={changeLanguage}
                         onMouseLeave={resetLang}
                     >
                         Hi, my name <br />
                         is <span className="font-bold">Christian</span>
-                        <span className="text-darkBlue3">.</span>
+                        <span className="text-lightBlue">.</span>
                     </div>
-                    <div className="xs-max:text-base text-2xl leading-normal">
+                    <div className="sm-max:text-xl text-2xl leading-normal py-5">
                         I am a{' '}
                         <span className="font-bold">full-stack developer</span>{' '}
-                        from Toronto, Ontario,
-                        <br /> with over{' '}
+                        from Toronto, Ontario, <br className="sm-max:hidden" />{' '}
+                        with over <br className="xs:hidden" />
                         <Link to={ROUTES.experience} className="text-darkBlue3">
                             5 years of full-time work experience
                         </Link>

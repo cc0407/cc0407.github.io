@@ -16,11 +16,12 @@ const root = ReactDOM.createRoot(
 const Layout = () => {
     return (
         <>
-            <img
+            {/* <img
                 src={bgImg}
                 className="absolute z-1 object-cover h-screen w-screen left-0 top-0 opacity-25"
-            />
-            <div className="md-max:w-[calc(100vw-1rem)] md-max:h-[calc(100vh-1rem)] md-max:m-2 w-[calc(100vw-2rem)] h-[calc(100vh-2rem)] m-4 overflow-y-auto overflow-x-hidden flex flex-col font-grenoble relative z-10 bg-white/90">
+            /> */}
+            <div className="absolute z-1 object-cover h-screen w-screen left-0 top-0 bg-darkBlue2"></div>
+            <div className="md-max:w-[calc(100vw-1rem)] md-max:h-[calc(100vh-1rem)] md-max:m-2 w-[calc(100vw-1.5rem)] h-[calc(100vh-1.5rem)] m-3 overflow-y-auto overflow-x-hidden flex flex-col font-grenoble relative z-10 bg-white/95">
                 <Nav />
                 <Outlet />
             </div>
