@@ -3,63 +3,63 @@
         "type": "project",
         "projectType": "personal",
         "slug": "portfolio",
-        "name": "Portfolio Website (this)",
-        "description": "",
-        "link": "/", 
-        "target":"_self"
+        "name": "Portfolio Website",
+        "description": "This website, build using React and Typescript.",
+        "link": "/",
+        "target": "_self"
     },
     {
         "type": "project",
         "projectType": "personal",
         "slug": "russian-practice",
-        "name": "Russian Alphabet Practice", 
+        "name": "Russian Alphabet Practice",
         "description": "",
-        "link": "/russian-alphabet-practice", 
-        "target":"_self"
+        "link": "/russian-alphabet-practice",
+        "target": "_self"
     },
     {
         "type": "project",
         "projectType": "personal",
         "slug": "tic-tac-toe",
-        "name": "Tic-Tac-Toe Clone", 
+        "name": "Tic-Tac-Toe Clone",
         "description": "",
-        "link": "/tic-tac-toe", 
-        "target":"_self"
+        "link": "/tic-tac-toe",
+        "target": "_self"
     },
     {
         "type": "project",
         "projectType": "personal",
         "slug": "stars-arcade",
-        "name": "Stars Arcade", 
+        "name": "Stars Arcade",
         "description": "",
-        "link": "https://github.com/cc0407/stars-arcade", 
-        "target":"_blank"
+        "link": "https://github.com/cc0407/stars-arcade",
+        "target": "_blank"
     },
     {
         "type": "project",
         "projectType": "personal",
         "slug": "game-of-life",
-        "name": "Conway's Game of Life", 
+        "name": "Conway's Game of Life",
         "description": "",
-        "link": "https://github.com/cc0407/Conways-Game-of-Life", 
-        "target":"_blank"
+        "link": "https://github.com/cc0407/Conways-Game-of-Life",
+        "target": "_blank"
     },
     {
         "type": "project",
         "projectType": "work",
         "slug": "viva",
         "name": "VIVA Streaming TV",
-        "description": "This website was designed and built from scratch using Gatsby, Typescript, and Tailwind.",
-        "link": "https://landing.vivatv.ca", 
-        "target":"_blank"
+        "description": "Designed and built from scratch using Gatsby, Typescript, and Tailwind.",
+        "link": "https://landing.vivatv.ca",
+        "target": "_blank"
     },
     {
         "type": "project",
         "projectType": "work",
         "slug": "tln-soccer",
         "name": "TLN - Soccer Redesign",
-        "description": "", 
-        "link": "https://tln.ca/soccer", 
-        "target":"_blank"
+        "description": "",
+        "link": "https://tln.ca/soccer",
+        "target": "_blank"
     }
 ]

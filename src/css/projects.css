@@ -1,22 +1,24 @@
-.projectListItem {
-    @apply w-72 h-12 my-4 rounded-md flex justify-center items-center bg-main text-white underline select-none;
+.projectSlider {
+    @apply font-catamaran;
 }
 
-.projectTitle {
-    @apply text-xl mt-4;
-}
-@screen xs {
-    .projectTitle {
-        @apply text-2xl;
-    }
+.featured-list {
+    @apply flex-grow;
 }
 
-.projectDescription {
-    @apply text-lg;
-}
-.projectImageContainer {
-    @apply flex justify-center items-center min-w-80;
-}
-.projectImageContainer div {
+.featured-list > .slick-list,
+.featured-list > .slick-list > .slick-track {
     @apply h-full;
+}
+
+.featured-list .slick-slide > div {
+    @apply h-full lg-max:py-8 lg-max:px-12 p-16 box-border;
+}
+
+.slick-arrow::before {
+    @apply text-darkBlue;
+}
+
+.slick-current {
+    @apply font-bold;
 }

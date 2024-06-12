@@ -5,6 +5,8 @@
 @import '@fontsource/aileron';
 @import '@fontsource-variable/catamaran';
 @import '@fontsource-variable/bitter';
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
 
 @tailwind base;
 @tailwind components;
