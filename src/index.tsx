@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider, Outlet, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, Outlet, createHashRouter } from 'react-router-dom';
 import * as PAGES from './pages';
 import { ROUTES } from './routes';
 import { Nav } from './sections';
 import './index.css';
 import './';
-
-const bgImg = require('./img/bg/landing.webp');
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -29,7 +27,7 @@ const Layout = () => {
     );
 };
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         element: <Layout />,
         children: [
