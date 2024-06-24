@@ -6,8 +6,9 @@ export const experience: project[] = [
         name: 'VIVA Streaming TV',
         description:
             'Designed and built from scratch using Gatsby, Typescript, and Tailwind.',
-        link: 'https://landing.vivatv.ca',
-        image: require('../img/projects/icon-512x512.png'),
+        prodLink: 'https://landing.vivatv.ca',
+        poster: require('../img/projects/icon-512x512.png'),
+        banner: require('../img/projects/viva banner.png'),
         target: '_blank',
     },
     {
@@ -15,8 +16,9 @@ export const experience: project[] = [
         name: 'TLN',
         description:
             'Designed and built site using custom Wordpress theme and PHP.',
-        link: 'https://www.tln.ca/',
-        image: require('../img/projects/tln.png'),
+        prodLink: 'https://www.tln.ca/',
+        poster: require('../img/projects/tln.png'),
+        banner: require('../img/projects/tln banner.png'),
         target: '_blank',
     },
     {
@@ -24,17 +26,18 @@ export const experience: project[] = [
         name: 'TLN - Soccer Redesign',
         description:
             'Updated all pages related to soccer, to better reflect industry standards.',
-        link: 'https://tln.ca/soccer',
-        image: require('../img/projects/tln-soccer.jpg'),
+        prodLink: 'https://tln.ca/soccer',
+        poster: require('../img/projects/tln-soccer.jpg'),
+        banner: require('../img/projects/tln-soccer banner.jpg'),
         target: '_blank',
     },
     {
         projectType: 'work',
         name: 'DisplayPro',
-        description:
-            'Assisted in styling and front-end functionality, on a freelance basis.',
-        link: 'https://displaypro.shop/',
-        image: require('../img/projects/displaypro.webp'),
+        description: 'Assisted in styling and front-end functionality.',
+        prodLink: 'https://displaypro.shop/',
+        poster: require('../img/projects/displaypro.webp'),
+        banner: require('../img/projects/displaypro banner.webp'),
         target: '_blank',
     },
     {
@@ -42,8 +45,9 @@ export const experience: project[] = [
         name: 'Boosted Bouillon',
         description:
             'Designed and built from scratch using React, Typescript, and Tailwind.',
-        link: 'https://boostedbouillon.com/',
-        image: require('../img/projects/boosted.png'),
+        prodLink: 'https://boostedbouillon.com/',
+        poster: require('../img/projects/boosted.png'),
+        banner: require('../img/projects/boosted banner.png'),
         target: '_blank',
     },
 ];

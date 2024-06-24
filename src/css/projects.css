@@ -15,7 +15,7 @@
 }
 
 .featured-list .slick-slide > div {
-    @apply h-full lg-max:p-8 p-16 box-border;
+    @apply h-full lg-max:p-4 p-16 box-border;
 }
 
 .slick-arrow::before {

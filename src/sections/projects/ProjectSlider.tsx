@@ -45,12 +45,19 @@ export const ProjectSlider: React.FC<MI> = ({ datasrc }) => {
                     dots={true}
                     infinite={true}
                     speed={500}
-                    slidesToShow={3}
-                    slidesToScroll={3}
+                    slidesToShow={5}
+                    slidesToScroll={5}
                     initialSlide={0}
                     focusOnSelect={true}
                     centerMode={true}
                     responsive={[
+                        {
+                            breakpoint: 1440,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 3,
+                            },
+                        },
                         {
                             breakpoint: 800,
                             settings: {

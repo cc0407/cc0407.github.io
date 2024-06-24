@@ -2,7 +2,9 @@ export type project = {
     projectType: string;
     name: string;
     description: string;
-    link?: string;
+    learnLink?: string;
+    prodLink?: string;
     target?: string;
-    image?: string;
+    poster?: string;
+    banner?: string;
 };
