@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fac75095.css",
-    "main.js": "/static/js/main.068ce57f.js",
+    "main.js": "/static/js/main.8e3464b4.js",
     "static/media/tln banner.png": "/static/media/tln banner.58a5d9193dbdce6b7942.png",
     "static/media/tln.png": "/static/media/tln.ab690052aa9bc273fa18.png",
     "static/media/tln-soccer.jpg": "/static/media/tln-soccer.2c2733d3d99d492e2729.jpg",
@@ -13,7 +13,6 @@
     "static/media/tln-soccer banner.jpg": "/static/media/tln-soccer banner.d4a0fded18c0ede94ee0.jpg",
     "static/media/displaypro.webp": "/static/media/displaypro.9643dcf037c81a8284c0.webp",
     "static/media/russian-practice.PNG": "/static/media/russian-practice.3222e1f4f53969e57f62.PNG",
-    "static/media/landing.webp": "/static/media/landing.e8c1117f314fe6ac2686.webp",
     "static/media/displaypro banner.webp": "/static/media/displaypro banner.9d9802d611f703b3e83e.webp",
     "static/media/catamaran-tamil-wght-normal.woff2": "/static/media/catamaran-tamil-wght-normal.50278d297a7246bad496.woff2",
     "static/media/bitter-latin-wght-normal.woff2": "/static/media/bitter-latin-wght-normal.803603bead2e6c2c08bc.woff2",
@@ -37,10 +36,10 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.fac75095.css.map": "/static/css/main.fac75095.css.map",
-    "main.068ce57f.js.map": "/static/js/main.068ce57f.js.map"
+    "main.8e3464b4.js.map": "/static/js/main.8e3464b4.js.map"
   },
   "entrypoints": [
     "static/css/main.fac75095.css",
-    "static/js/main.068ce57f.js"
+    "static/js/main.8e3464b4.js"
   ]
 }
